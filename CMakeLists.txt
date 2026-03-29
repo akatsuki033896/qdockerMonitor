@@ -1,21 +1,38 @@
-﻿# CMakeList.txt: MoreLeptJson 的 CMake 项目，在此处包括源代码并定义
-# 项目特定的逻辑。
-#
-cmake_minimum_required (VERSION 3.8)
+cmake_minimum_required(VERSION 3.19)
+set(CMAKE_CXX_STANDARD 17)
+set(CMAKE_AUTOMOC ON)
+set(CMAKE_AUTOUIC ON)
+set(CMAKE_AUTORCC ON)
 
-# Enable Hot Reload for MSVC compilers if supported.
-if (POLICY CMP0141)
-  cmake_policy(SET CMP0141 NEW)
-  set(CMAKE_MSVC_DEBUG_INFORMATION_FORMAT "$<IF:$<AND:$<C_COMPILER_ID:MSVC>,$<CXX_COMPILER_ID:MSVC>>,$<$<CONFIG:Debug,RelWithDebInfo>:EditAndContinue>,$<$<CONFIG:Debug,RelWithDebInfo>:ProgramDatabase>>")
-endif()
+project(SystemMonitor LANGUAGES CXX)
 
-project ("MoreLeptJson")
+find_package(Qt6 6.5 REQUIRED COMPONENTS Core Widgets)
 
-# 将源代码添加到此项目的可执行文件。
-add_executable (MoreLeptJson "MoreLeptJson.cpp" "Print.h")
+qt_standard_project_setup()
 
-if (CMAKE_VERSION VERSION_GREATER 3.12)
-  set_property(TARGET MoreLeptJson PROPERTY CXX_STANDARD 20)
-endif()
+qt_add_executable(SystemMonitor
+    WIN32 MACOSX_BUNDLE
+    main.cpp
+    mainwindow.cpp
+    mainwindow.h
+    json.hpp # https://github.com/nlohmann/json/releases
+)
 
-# TODO: 如有需要，请添加测试并安装目标。
+target_link_libraries(SystemMonitor
+    PRIVATE
+        Qt::Core
+        Qt::Widgets
+)
+
+install(TARGETS SystemMonitor
+    BUNDLE  DESTINATION .
+    RUNTIME DESTINATION ${CMAKE_INSTALL_BINDIR}
+    LIBRARY DESTINATION ${CMAKE_INSTALL_LIBDIR}
+)
+
+qt_generate_deploy_app_script(
+    TARGET SystemMonitor
+    OUTPUT_SCRIPT deploy_script
+    NO_UNSUPPORTED_PLATFORM_ERROR
+)
+install(SCRIPT ${deploy_script})

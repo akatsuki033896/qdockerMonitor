@@ -1,2 +1,0 @@
-# MoreLeptJson
-c++ practice1

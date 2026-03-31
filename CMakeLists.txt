@@ -1,5 +1,5 @@
 cmake_minimum_required(VERSION 3.19)
-set(CMAKE_CXX_STANDARD 17)
+set(CMAKE_CXX_STANDARD 20)
 set(CMAKE_AUTOMOC ON)
 set(CMAKE_AUTOUIC ON)
 set(CMAKE_AUTORCC ON)
@@ -16,6 +16,13 @@ qt_add_executable(SystemMonitor
     mainwindow.cpp
     mainwindow.h
     json.hpp # https://github.com/nlohmann/json/releases
+    threadpool.cpp
+    threadpool.hpp
+    container.h
+    util.h
+    util.cpp
+    containerManager.h
+    containerManager.cpp
 )
 
 target_link_libraries(SystemMonitor

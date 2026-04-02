@@ -1,0 +1,9 @@
+/Users/akatsuki/Desktop/SystemMonitor/build/CMakeFiles/SystemMonitor.dir
+/Users/akatsuki/Desktop/SystemMonitor/build/CMakeFiles/edit_cache.dir
+/Users/akatsuki/Desktop/SystemMonitor/build/CMakeFiles/rebuild_cache.dir
+/Users/akatsuki/Desktop/SystemMonitor/build/CMakeFiles/list_install_components.dir
+/Users/akatsuki/Desktop/SystemMonitor/build/CMakeFiles/install.dir
+/Users/akatsuki/Desktop/SystemMonitor/build/CMakeFiles/install/local.dir
+/Users/akatsuki/Desktop/SystemMonitor/build/CMakeFiles/install/strip.dir
+/Users/akatsuki/Desktop/SystemMonitor/build/CMakeFiles/SystemMonitor_autogen_timestamp_deps.dir
+/Users/akatsuki/Desktop/SystemMonitor/build/CMakeFiles/SystemMonitor_autogen.dir

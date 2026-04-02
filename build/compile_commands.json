@@ -1,0 +1,38 @@
+[
+{
+  "directory": "/Users/akatsuki/Desktop/SystemMonitor/build",
+  "command": "/usr/bin/c++ -DQT_CORE_LIB -DQT_GUI_LIB -DQT_WIDGETS_LIB -I/Users/akatsuki/Desktop/SystemMonitor/build/SystemMonitor_autogen/include -isystem /Users/akatsuki/Qt/6.11.0/macos/lib/QtCore.framework/Headers -iframework /Users/akatsuki/Qt/6.11.0/macos/lib -isystem /Users/akatsuki/Qt/6.11.0/macos/mkspecs/macx-clang -isystem /Users/akatsuki/Qt/6.11.0/macos/include -isystem /Users/akatsuki/Qt/6.11.0/macos/lib/QtWidgets.framework/Headers -isystem /Users/akatsuki/Qt/6.11.0/macos/lib/QtGui.framework/Headers -g -std=gnu++20 -arch arm64 -o CMakeFiles/SystemMonitor.dir/SystemMonitor_autogen/mocs_compilation.cpp.o -c /Users/akatsuki/Desktop/SystemMonitor/build/SystemMonitor_autogen/mocs_compilation.cpp",
+  "file": "/Users/akatsuki/Desktop/SystemMonitor/build/SystemMonitor_autogen/mocs_compilation.cpp",
+  "output": "CMakeFiles/SystemMonitor.dir/SystemMonitor_autogen/mocs_compilation.cpp.o"
+},
+{
+  "directory": "/Users/akatsuki/Desktop/SystemMonitor/build",
+  "command": "/usr/bin/c++ -DQT_CORE_LIB -DQT_GUI_LIB -DQT_WIDGETS_LIB -I/Users/akatsuki/Desktop/SystemMonitor/build/SystemMonitor_autogen/include -isystem /Users/akatsuki/Qt/6.11.0/macos/lib/QtCore.framework/Headers -iframework /Users/akatsuki/Qt/6.11.0/macos/lib -isystem /Users/akatsuki/Qt/6.11.0/macos/mkspecs/macx-clang -isystem /Users/akatsuki/Qt/6.11.0/macos/include -isystem /Users/akatsuki/Qt/6.11.0/macos/lib/QtWidgets.framework/Headers -isystem /Users/akatsuki/Qt/6.11.0/macos/lib/QtGui.framework/Headers -g -std=gnu++20 -arch arm64 -o CMakeFiles/SystemMonitor.dir/main.cpp.o -c /Users/akatsuki/Desktop/SystemMonitor/main.cpp",
+  "file": "/Users/akatsuki/Desktop/SystemMonitor/main.cpp",
+  "output": "CMakeFiles/SystemMonitor.dir/main.cpp.o"
+},
+{
+  "directory": "/Users/akatsuki/Desktop/SystemMonitor/build",
+  "command": "/usr/bin/c++ -DQT_CORE_LIB -DQT_GUI_LIB -DQT_WIDGETS_LIB -I/Users/akatsuki/Desktop/SystemMonitor/build/SystemMonitor_autogen/include -isystem /Users/akatsuki/Qt/6.11.0/macos/lib/QtCore.framework/Headers -iframework /Users/akatsuki/Qt/6.11.0/macos/lib -isystem /Users/akatsuki/Qt/6.11.0/macos/mkspecs/macx-clang -isystem /Users/akatsuki/Qt/6.11.0/macos/include -isystem /Users/akatsuki/Qt/6.11.0/macos/lib/QtWidgets.framework/Headers -isystem /Users/akatsuki/Qt/6.11.0/macos/lib/QtGui.framework/Headers -g -std=gnu++20 -arch arm64 -o CMakeFiles/SystemMonitor.dir/mainwindow.cpp.o -c /Users/akatsuki/Desktop/SystemMonitor/mainwindow.cpp",
+  "file": "/Users/akatsuki/Desktop/SystemMonitor/mainwindow.cpp",
+  "output": "CMakeFiles/SystemMonitor.dir/mainwindow.cpp.o"
+},
+{
+  "directory": "/Users/akatsuki/Desktop/SystemMonitor/build",
+  "command": "/usr/bin/c++ -DQT_CORE_LIB -DQT_GUI_LIB -DQT_WIDGETS_LIB -I/Users/akatsuki/Desktop/SystemMonitor/build/SystemMonitor_autogen/include -isystem /Users/akatsuki/Qt/6.11.0/macos/lib/QtCore.framework/Headers -iframework /Users/akatsuki/Qt/6.11.0/macos/lib -isystem /Users/akatsuki/Qt/6.11.0/macos/mkspecs/macx-clang -isystem /Users/akatsuki/Qt/6.11.0/macos/include -isystem /Users/akatsuki/Qt/6.11.0/macos/lib/QtWidgets.framework/Headers -isystem /Users/akatsuki/Qt/6.11.0/macos/lib/QtGui.framework/Headers -g -std=gnu++20 -arch arm64 -o CMakeFiles/SystemMonitor.dir/threadpool.cpp.o -c /Users/akatsuki/Desktop/SystemMonitor/threadpool.cpp",
+  "file": "/Users/akatsuki/Desktop/SystemMonitor/threadpool.cpp",
+  "output": "CMakeFiles/SystemMonitor.dir/threadpool.cpp.o"
+},
+{
+  "directory": "/Users/akatsuki/Desktop/SystemMonitor/build",
+  "command": "/usr/bin/c++ -DQT_CORE_LIB -DQT_GUI_LIB -DQT_WIDGETS_LIB -I/Users/akatsuki/Desktop/SystemMonitor/build/SystemMonitor_autogen/include -isystem /Users/akatsuki/Qt/6.11.0/macos/lib/QtCore.framework/Headers -iframework /Users/akatsuki/Qt/6.11.0/macos/lib -isystem /Users/akatsuki/Qt/6.11.0/macos/mkspecs/macx-clang -isystem /Users/akatsuki/Qt/6.11.0/macos/include -isystem /Users/akatsuki/Qt/6.11.0/macos/lib/QtWidgets.framework/Headers -isystem /Users/akatsuki/Qt/6.11.0/macos/lib/QtGui.framework/Headers -g -std=gnu++20 -arch arm64 -o CMakeFiles/SystemMonitor.dir/util.cpp.o -c /Users/akatsuki/Desktop/SystemMonitor/util.cpp",
+  "file": "/Users/akatsuki/Desktop/SystemMonitor/util.cpp",
+  "output": "CMakeFiles/SystemMonitor.dir/util.cpp.o"
+},
+{
+  "directory": "/Users/akatsuki/Desktop/SystemMonitor/build",
+  "command": "/usr/bin/c++ -DQT_CORE_LIB -DQT_GUI_LIB -DQT_WIDGETS_LIB -I/Users/akatsuki/Desktop/SystemMonitor/build/SystemMonitor_autogen/include -isystem /Users/akatsuki/Qt/6.11.0/macos/lib/QtCore.framework/Headers -iframework /Users/akatsuki/Qt/6.11.0/macos/lib -isystem /Users/akatsuki/Qt/6.11.0/macos/mkspecs/macx-clang -isystem /Users/akatsuki/Qt/6.11.0/macos/include -isystem /Users/akatsuki/Qt/6.11.0/macos/lib/QtWidgets.framework/Headers -isystem /Users/akatsuki/Qt/6.11.0/macos/lib/QtGui.framework/Headers -g -std=gnu++20 -arch arm64 -o CMakeFiles/SystemMonitor.dir/containerManager.cpp.o -c /Users/akatsuki/Desktop/SystemMonitor/containerManager.cpp",
+  "file": "/Users/akatsuki/Desktop/SystemMonitor/containerManager.cpp",
+  "output": "CMakeFiles/SystemMonitor.dir/containerManager.cpp.o"
+}
+]

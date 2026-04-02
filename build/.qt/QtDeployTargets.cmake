@@ -1,0 +1,2 @@
+set(__QT_DEPLOY_TARGET_SystemMonitor_FILE /Users/akatsuki/Desktop/SystemMonitor/build/SystemMonitor.app/Contents/MacOS/SystemMonitor)
+set(__QT_DEPLOY_TARGET_SystemMonitor_TYPE EXECUTABLE)

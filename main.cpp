@@ -3,6 +3,7 @@
 #include "mainwindow.h"
 #include <QApplication>
 #include <QtCore/qobject.h>
+#include <QtCore/qobjectdefs.h>
 #include <QtCore/qtimer.h>
 #include <cstddef>
 #include <cstdlib>
@@ -19,35 +20,48 @@
 // docker top <container_ID> 容器内部进程监控
 
 int main(int argc, char *argv[]) {
-    QApplication a(argc, argv);
+    QApplication app(argc, argv);
     std::cout << "system monitor start running." << '\n';
 
     ContainerManager manager;
     ThreadPool pool;
     QTimer timer;
 
+    // 定时器定时刷新
     QObject::connect(&timer, &QTimer::timeout, [&]() {
-        manager.refresh();
-        auto list = manager.get_container_list();
-        // std::cout << list[0].id << '\n';
-        for (auto& con : list) {
-            pool.addTask([&manager, id = con.id] {
-                Container temp;
-                temp.id = id;
-                getStat(temp);
-                // std::cout << "get stat done.\n";
-                getInspect(temp);
-                // std::cout << "get inspect done.\n";
-                manager.update(temp);
-            });
-        }
-    });
+    manager.refresh();
+
+    auto list = manager.get_container_list();
+
+    std::vector<std::string> ids;
+    for (const auto& c : list) {
+        ids.push_back(c.id);
+    }
+
+    for (const auto& id : ids) {
+        pool.addTask([id, mgr = &manager]() {
+            Container temp;
+            temp.id = id;
+
+            getStat(temp);
+            getInspect(temp);
+
+            QMetaObject::invokeMethod(mgr, [mgr, temp]() {
+                mgr->update(temp);
+            }, Qt::QueuedConnection);
+        });
+    }
+});
 
     timer.start(3000); // 3s 执行一次 事件驱动
-    
+
     // GUI
 
-    // MainWindow w;
-    // w.show();
-    return a.exec();
+    MainWindow win;
+    // 连接 UI
+    QObject::connect(&manager, &ContainerManager::containerUpdated, &win, &MainWindow::onContainersUpdated);
+
+
+    win.show();
+    return app.exec();
 }

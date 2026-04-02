@@ -1,7 +1,10 @@
 #include "containerManager.h"
+#include <QtCore/qlogging.h>
 #include <sstream>
 #include "util.h"
 #include <mutex>
+#include <qdebug.h>
+#include <iostream>
 
 ContainerManager::ContainerManager() {
     refresh();
@@ -24,7 +27,7 @@ void ContainerManager::refresh() {
         std::lock_guard<std::mutex> lock(mtx);
         container_list = std::move(newList);
     }
-    emit containerUpdated(container_list); 
+    emit ContainerListChanged(container_list);
 }
 
 std::vector<Container> ContainerManager::get_container_list() {
@@ -33,16 +36,20 @@ std::vector<Container> ContainerManager::get_container_list() {
 }
 
 void ContainerManager::update(const Container& newCon) {
+    bool flag = false;
     {
         std::lock_guard<std::mutex> lock(mtx);
         for (auto& con : container_list) {
             if (con.id == newCon.id) {
                 con = newCon;
-                return;
+                flag = true;
             }
         }
         // 写回 之后改成哈希表
         // do some update
     }
-    emit containerUpdated(container_list); // 更新UI
+    if (flag) {
+        emit ContainerStatsUpdated(newCon); // 更新UI
+        // qDebug() << "emit statsUpdated";
+    }
 }

@@ -2,6 +2,7 @@
 #include "containerManager.h"
 #include "mainwindow.h"
 #include <QApplication>
+#include <QtCore/qdebug.h>
 #include <QtCore/qobject.h>
 #include <QtCore/qobjectdefs.h>
 #include <QtCore/qtimer.h>
@@ -29,29 +30,29 @@ int main(int argc, char *argv[]) {
 
     // 定时器定时刷新
     QObject::connect(&timer, &QTimer::timeout, [&]() {
-    manager.refresh();
+        manager.refresh();
 
-    auto list = manager.get_container_list();
+        auto list = manager.get_container_list();
 
-    std::vector<std::string> ids;
-    for (const auto& c : list) {
-        ids.push_back(c.id);
-    }
+        std::vector<std::string> ids;
+        for (const auto& c : list) {
+            ids.push_back(c.id);
+        }
 
-    for (const auto& id : ids) {
-        pool.addTask([id, mgr = &manager]() {
-            Container temp;
-            temp.id = id;
-
-            getStat(temp);
-            getInspect(temp);
-
-            QMetaObject::invokeMethod(mgr, [mgr, temp]() {
-                mgr->update(temp);
-            }, Qt::QueuedConnection);
-        });
-    }
-});
+        for (const auto& id : ids) {
+            pool.addTask([id, mgr = &manager]() {
+                Container temp;
+                temp.id = id;
+                getStat(temp);
+                getInspect(temp);
+                // qDebug() << "before invoke";
+                QMetaObject::invokeMethod(mgr, [mgr, temp]() {
+                    // qDebug() << "invoke";
+                    mgr->update(temp);
+                }, Qt::QueuedConnection);
+            });
+        }
+    });
 
     timer.start(3000); // 3s 执行一次 事件驱动
 
@@ -59,9 +60,9 @@ int main(int argc, char *argv[]) {
 
     MainWindow win;
     // 连接 UI
-    QObject::connect(&manager, &ContainerManager::containerUpdated, &win, &MainWindow::onContainersUpdated);
-
-
+     
+    QObject::connect(&manager, &ContainerManager::ContainerListChanged, &win, &MainWindow::onContainerListChanged);
+    QObject::connect(&manager, &ContainerManager::ContainerStatsUpdated, &win, &MainWindow::onContainerStatsUpdated);
     win.show();
     return app.exec();
 }

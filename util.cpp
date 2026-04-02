@@ -36,8 +36,7 @@ void getStat(Container& c) {
 
     json j = json::parse(stats_str);
     // c.id = j["Container"]; // long id
-    // c.name = j["Name"];
-
+    c.name = j["Name"];
     std::string cpu = j["CPUPerc"];
     c.cpuPercent = std::stod(cpu.substr(0, cpu.size() - 1));
     std::string mem = j["MemPerc"];
@@ -87,4 +86,5 @@ void getInspect(Container& c) {
     std::cout << "CPU: " << c.cpuPercent << "%\n";
     std::cout << "Mem: " << c.memUsage << '\n';
     std::cout << "IP: " << c.ip << '\n';
+    std::cout << "Image: " << c.image << '\n';
 }

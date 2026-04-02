@@ -248,6 +248,30 @@ containerManager.cpp.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/SystemMonitor.dir/build.make CMakeFiles/SystemMonitor.dir/containerManager.cpp.s
 .PHONY : containerManager.cpp.s
 
+containerpage.o: containerpage.cpp.o
+.PHONY : containerpage.o
+
+# target to build an object file
+containerpage.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/SystemMonitor.dir/build.make CMakeFiles/SystemMonitor.dir/containerpage.cpp.o
+.PHONY : containerpage.cpp.o
+
+containerpage.i: containerpage.cpp.i
+.PHONY : containerpage.i
+
+# target to preprocess a source file
+containerpage.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/SystemMonitor.dir/build.make CMakeFiles/SystemMonitor.dir/containerpage.cpp.i
+.PHONY : containerpage.cpp.i
+
+containerpage.s: containerpage.cpp.s
+.PHONY : containerpage.s
+
+# target to generate assembly for a file
+containerpage.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/SystemMonitor.dir/build.make CMakeFiles/SystemMonitor.dir/containerpage.cpp.s
+.PHONY : containerpage.cpp.s
+
 main.o: main.cpp.o
 .PHONY : main.o
 
@@ -365,6 +389,9 @@ help:
 	@echo "... containerManager.o"
 	@echo "... containerManager.i"
 	@echo "... containerManager.s"
+	@echo "... containerpage.o"
+	@echo "... containerpage.i"
+	@echo "... containerpage.s"
 	@echo "... main.o"
 	@echo "... main.i"
 	@echo "... main.s"

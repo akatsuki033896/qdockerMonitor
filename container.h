@@ -13,6 +13,7 @@ struct Container {
     bool running;
     std::string startedAt;
 
+    // 网络
     std::string ip;
     std::map<std::string, std::string> ports;
 

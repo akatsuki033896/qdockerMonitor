@@ -1184,16 +1184,16 @@ CMakeFiles/SystemMonitor.dir/SystemMonitor_autogen/mocs_compilation.cpp.o: \
   /Users/akatsuki/Qt/6.11.0/macos/lib/QtCore.framework/Headers/qtmochelpers.h \
   /Users/akatsuki/Qt/6.11.0/macos/lib/QtCore.framework/Headers/qtmocconstants.h \
   /Users/akatsuki/Qt/6.11.0/macos/lib/QtCore.framework/Headers/q20algorithm.h \
-  /Users/akatsuki/Desktop/SystemMonitor/build/SystemMonitor_autogen/EWIEGA46WW/moc_mainwindow.cpp \
-  /Users/akatsuki/Desktop/SystemMonitor/build/SystemMonitor_autogen/EWIEGA46WW/../../../mainwindow.h \
-  /Users/akatsuki/Qt/6.11.0/macos/lib/QtWidgets.framework/Headers/QMainWindow \
-  /Users/akatsuki/Qt/6.11.0/macos/lib/QtWidgets.framework/Headers/qmainwindow.h \
+  /Users/akatsuki/Desktop/SystemMonitor/build/SystemMonitor_autogen/EWIEGA46WW/moc_containerpage.cpp \
+  /Users/akatsuki/Desktop/SystemMonitor/build/SystemMonitor_autogen/EWIEGA46WW/../../../containerpage.h \
+  /Users/akatsuki/Qt/6.11.0/macos/lib/QtWidgets.framework/Headers/qlabel.h \
   /Users/akatsuki/Qt/6.11.0/macos/lib/QtWidgets.framework/Headers/qtwidgetsglobal.h \
   /Users/akatsuki/Qt/6.11.0/macos/lib/QtGui.framework/Headers/qtguiglobal.h \
   /Users/akatsuki/Qt/6.11.0/macos/lib/QtGui.framework/Headers/qtgui-config.h \
   /Users/akatsuki/Qt/6.11.0/macos/lib/QtGui.framework/Headers/qtguiexports.h \
   /Users/akatsuki/Qt/6.11.0/macos/lib/QtWidgets.framework/Headers/qtwidgets-config.h \
   /Users/akatsuki/Qt/6.11.0/macos/lib/QtWidgets.framework/Headers/qtwidgetsexports.h \
+  /Users/akatsuki/Qt/6.11.0/macos/lib/QtWidgets.framework/Headers/qframe.h \
   /Users/akatsuki/Qt/6.11.0/macos/lib/QtWidgets.framework/Headers/qwidget.h \
   /Users/akatsuki/Qt/6.11.0/macos/lib/QtGui.framework/Headers/qwindowdefs.h \
   /Users/akatsuki/Qt/6.11.0/macos/lib/QtCore.framework/Headers/qmargins.h \
@@ -1245,4 +1245,36 @@ CMakeFiles/SystemMonitor.dir/SystemMonitor_autogen/mocs_compilation.cpp.o: \
   /Users/akatsuki/Qt/6.11.0/macos/lib/QtWidgets.framework/Headers/qsizepolicy.h \
   /Users/akatsuki/Qt/6.11.0/macos/lib/QtGui.framework/Headers/qcursor.h \
   /Users/akatsuki/Qt/6.11.0/macos/lib/QtGui.framework/Headers/qbitmap.h \
-  /Users/akatsuki/Qt/6.11.0/macos/lib/QtWidgets.framework/Headers/qtabwidget.h
+  /Users/akatsuki/Qt/6.11.0/macos/lib/QtGui.framework/Headers/qpicture.h \
+  /Users/akatsuki/Qt/6.11.0/macos/lib/QtCore.framework/Headers/qiodevice.h \
+  /Users/akatsuki/Qt/6.11.0/macos/lib/QtGui.framework/Headers/qtextdocument.h \
+  /Users/akatsuki/Qt/6.11.0/macos/lib/QtCore.framework/Headers/qurl.h \
+  /Users/akatsuki/Qt/6.11.0/macos/lib/QtWidgets.framework/Headers/qprogressbar.h \
+  /Users/akatsuki/Qt/6.11.0/macos/lib/QtWidgets.framework/Headers/QLabel \
+  /Users/akatsuki/Qt/6.11.0/macos/lib/QtGui.framework/Headers/qtextcursor.h \
+  /Users/akatsuki/Qt/6.11.0/macos/lib/QtGui.framework/Headers/qtextformat.h \
+  /Users/akatsuki/Qt/6.11.0/macos/lib/QtGui.framework/Headers/qpen.h \
+  /Users/akatsuki/Qt/6.11.0/macos/lib/QtGui.framework/Headers/qtextoption.h \
+  /Users/akatsuki/Desktop/SystemMonitor/build/SystemMonitor_autogen/EWIEGA46WW/moc_mainwindow.cpp \
+  /Users/akatsuki/Desktop/SystemMonitor/build/SystemMonitor_autogen/EWIEGA46WW/../../../mainwindow.h \
+  /Users/akatsuki/Qt/6.11.0/macos/lib/QtWidgets.framework/Headers/QMainWindow \
+  /Users/akatsuki/Qt/6.11.0/macos/lib/QtWidgets.framework/Headers/qmainwindow.h \
+  /Users/akatsuki/Qt/6.11.0/macos/lib/QtWidgets.framework/Headers/qtabwidget.h \
+  /Users/akatsuki/Qt/6.11.0/macos/lib/QtWidgets.framework/Headers/qlistwidget.h \
+  /Users/akatsuki/Qt/6.11.0/macos/lib/QtWidgets.framework/Headers/qlistview.h \
+  /Users/akatsuki/Qt/6.11.0/macos/lib/QtWidgets.framework/Headers/qabstractitemview.h \
+  /Users/akatsuki/Qt/6.11.0/macos/lib/QtWidgets.framework/Headers/qabstractscrollarea.h \
+  /Users/akatsuki/Qt/6.11.0/macos/lib/QtCore.framework/Headers/qabstractitemmodel.h \
+  /Users/akatsuki/Qt/6.11.0/macos/lib/QtCore.framework/Headers/qitemselectionmodel.h \
+  /Users/akatsuki/Qt/6.11.0/macos/lib/QtWidgets.framework/Headers/qabstractitemdelegate.h \
+  /Users/akatsuki/Qt/6.11.0/macos/lib/QtWidgets.framework/Headers/qstyleoption.h \
+  /Users/akatsuki/Qt/6.11.0/macos/lib/QtCore.framework/Headers/qlocale.h \
+  /Users/akatsuki/Qt/6.11.0/macos/lib/QtWidgets.framework/Headers/qabstractspinbox.h \
+  /Users/akatsuki/Qt/6.11.0/macos/lib/QtGui.framework/Headers/qvalidator.h \
+  /Users/akatsuki/Qt/6.11.0/macos/lib/QtCore.framework/Headers/qregularexpression.h \
+  /Users/akatsuki/Qt/6.11.0/macos/lib/QtWidgets.framework/Headers/qslider.h \
+  /Users/akatsuki/Qt/6.11.0/macos/lib/QtWidgets.framework/Headers/qabstractslider.h \
+  /Users/akatsuki/Qt/6.11.0/macos/lib/QtWidgets.framework/Headers/qstyle.h \
+  /Users/akatsuki/Qt/6.11.0/macos/lib/QtWidgets.framework/Headers/qtabbar.h \
+  /Users/akatsuki/Qt/6.11.0/macos/lib/QtWidgets.framework/Headers/qrubberband.h \
+  /Users/akatsuki/Qt/6.11.0/macos/lib/QtWidgets.framework/Headers/qstackedwidget.h

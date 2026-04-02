@@ -19,5 +19,7 @@ public:
     ContainerManager(const ContainerManager&) = delete;
     ContainerManager operator=(const ContainerManager&) = delete;
 signals:
-    void containerUpdated(const std::vector<Container>& list); // 只声明不实现
+    // void containerUpdated(const std::vector<Container>& list); // 只声明不实现
+    void ContainerListChanged(const std::vector<Container>& list); // 更新列表（左边）
+    void ContainerStatsUpdated(const Container& con); // 更新单个页面（右边）
 };

@@ -1,4 +1,4 @@
-/Users/akatsuki/Desktop/SystemMonitor/build/SystemMonitor_autogen/EWIEGA46WW/moc_mainwindow.cpp: /Users/akatsuki/Desktop/SystemMonitor/mainwindow.h \
+/Users/akatsuki/Desktop/SystemMonitor/build/SystemMonitor_autogen/EWIEGA46WW/moc_containerpage.cpp: /Users/akatsuki/Desktop/SystemMonitor/containerpage.h \
   /Users/akatsuki/Desktop/SystemMonitor/build/SystemMonitor_autogen/moc_predefs.h \
   /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/clang/17/include/__stdarg___gnuc_va_list.h \
   /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/clang/17/include/__stdarg___va_copy.h \
@@ -996,7 +996,6 @@
   /Library/Developer/CommandLineTools/SDKs/MacOSX26.4.sdk/usr/include/xlocale.h \
   /Library/Developer/CommandLineTools/SDKs/MacOSX26.4.sdk/usr/include/xlocale/_time.h \
   /Users/akatsuki/Desktop/SystemMonitor/container.h \
-  /Users/akatsuki/Desktop/SystemMonitor/containerpage.h \
   /Users/akatsuki/Qt/6.11.0/macos/lib/QtCore.framework/Versions/A/Headers/q17memory.h \
   /Users/akatsuki/Qt/6.11.0/macos/lib/QtCore.framework/Versions/A/Headers/q20bit.h \
   /Users/akatsuki/Qt/6.11.0/macos/lib/QtCore.framework/Versions/A/Headers/q20functional.h \
@@ -1006,7 +1005,6 @@
   /Users/akatsuki/Qt/6.11.0/macos/lib/QtCore.framework/Versions/A/Headers/q20utility.h \
   /Users/akatsuki/Qt/6.11.0/macos/lib/QtCore.framework/Versions/A/Headers/q23type_traits.h \
   /Users/akatsuki/Qt/6.11.0/macos/lib/QtCore.framework/Versions/A/Headers/q23utility.h \
-  /Users/akatsuki/Qt/6.11.0/macos/lib/QtCore.framework/Versions/A/Headers/qabstractitemmodel.h \
   /Users/akatsuki/Qt/6.11.0/macos/lib/QtCore.framework/Versions/A/Headers/qalgorithms.h \
   /Users/akatsuki/Qt/6.11.0/macos/lib/QtCore.framework/Versions/A/Headers/qalloc.h \
   /Users/akatsuki/Qt/6.11.0/macos/lib/QtCore.framework/Versions/A/Headers/qanystringview.h \
@@ -1051,13 +1049,11 @@
   /Users/akatsuki/Qt/6.11.0/macos/lib/QtCore.framework/Versions/A/Headers/qhashfunctions.h \
   /Users/akatsuki/Qt/6.11.0/macos/lib/QtCore.framework/Versions/A/Headers/qiodevice.h \
   /Users/akatsuki/Qt/6.11.0/macos/lib/QtCore.framework/Versions/A/Headers/qiodevicebase.h \
-  /Users/akatsuki/Qt/6.11.0/macos/lib/QtCore.framework/Versions/A/Headers/qitemselectionmodel.h \
   /Users/akatsuki/Qt/6.11.0/macos/lib/QtCore.framework/Versions/A/Headers/qiterable.h \
   /Users/akatsuki/Qt/6.11.0/macos/lib/QtCore.framework/Versions/A/Headers/qiterator.h \
   /Users/akatsuki/Qt/6.11.0/macos/lib/QtCore.framework/Versions/A/Headers/qlatin1stringview.h \
   /Users/akatsuki/Qt/6.11.0/macos/lib/QtCore.framework/Versions/A/Headers/qline.h \
   /Users/akatsuki/Qt/6.11.0/macos/lib/QtCore.framework/Versions/A/Headers/qlist.h \
-  /Users/akatsuki/Qt/6.11.0/macos/lib/QtCore.framework/Versions/A/Headers/qlocale.h \
   /Users/akatsuki/Qt/6.11.0/macos/lib/QtCore.framework/Versions/A/Headers/qlogging.h \
   /Users/akatsuki/Qt/6.11.0/macos/lib/QtCore.framework/Versions/A/Headers/qmalloc.h \
   /Users/akatsuki/Qt/6.11.0/macos/lib/QtCore.framework/Versions/A/Headers/qmap.h \
@@ -1078,7 +1074,6 @@
   /Users/akatsuki/Qt/6.11.0/macos/lib/QtCore.framework/Versions/A/Headers/qprocessordetection.h \
   /Users/akatsuki/Qt/6.11.0/macos/lib/QtCore.framework/Versions/A/Headers/qrect.h \
   /Users/akatsuki/Qt/6.11.0/macos/lib/QtCore.framework/Versions/A/Headers/qrefcount.h \
-  /Users/akatsuki/Qt/6.11.0/macos/lib/QtCore.framework/Versions/A/Headers/qregularexpression.h \
   /Users/akatsuki/Qt/6.11.0/macos/lib/QtCore.framework/Versions/A/Headers/qscopedpointer.h \
   /Users/akatsuki/Qt/6.11.0/macos/lib/QtCore.framework/Versions/A/Headers/qscopeguard.h \
   /Users/akatsuki/Qt/6.11.0/macos/lib/QtCore.framework/Versions/A/Headers/qset.h \
@@ -1157,29 +1152,12 @@
   /Users/akatsuki/Qt/6.11.0/macos/lib/QtGui.framework/Versions/A/Headers/qtguiexports.h \
   /Users/akatsuki/Qt/6.11.0/macos/lib/QtGui.framework/Versions/A/Headers/qtguiglobal.h \
   /Users/akatsuki/Qt/6.11.0/macos/lib/QtGui.framework/Versions/A/Headers/qtransform.h \
-  /Users/akatsuki/Qt/6.11.0/macos/lib/QtGui.framework/Versions/A/Headers/qvalidator.h \
   /Users/akatsuki/Qt/6.11.0/macos/lib/QtGui.framework/Versions/A/Headers/qwindowdefs.h \
   /Users/akatsuki/Qt/6.11.0/macos/lib/QtWidgets.framework/Versions/A/Headers/QLabel \
-  /Users/akatsuki/Qt/6.11.0/macos/lib/QtWidgets.framework/Versions/A/Headers/QMainWindow \
-  /Users/akatsuki/Qt/6.11.0/macos/lib/QtWidgets.framework/Versions/A/Headers/qabstractitemdelegate.h \
-  /Users/akatsuki/Qt/6.11.0/macos/lib/QtWidgets.framework/Versions/A/Headers/qabstractitemview.h \
-  /Users/akatsuki/Qt/6.11.0/macos/lib/QtWidgets.framework/Versions/A/Headers/qabstractscrollarea.h \
-  /Users/akatsuki/Qt/6.11.0/macos/lib/QtWidgets.framework/Versions/A/Headers/qabstractslider.h \
-  /Users/akatsuki/Qt/6.11.0/macos/lib/QtWidgets.framework/Versions/A/Headers/qabstractspinbox.h \
   /Users/akatsuki/Qt/6.11.0/macos/lib/QtWidgets.framework/Versions/A/Headers/qframe.h \
   /Users/akatsuki/Qt/6.11.0/macos/lib/QtWidgets.framework/Versions/A/Headers/qlabel.h \
-  /Users/akatsuki/Qt/6.11.0/macos/lib/QtWidgets.framework/Versions/A/Headers/qlistview.h \
-  /Users/akatsuki/Qt/6.11.0/macos/lib/QtWidgets.framework/Versions/A/Headers/qlistwidget.h \
-  /Users/akatsuki/Qt/6.11.0/macos/lib/QtWidgets.framework/Versions/A/Headers/qmainwindow.h \
   /Users/akatsuki/Qt/6.11.0/macos/lib/QtWidgets.framework/Versions/A/Headers/qprogressbar.h \
-  /Users/akatsuki/Qt/6.11.0/macos/lib/QtWidgets.framework/Versions/A/Headers/qrubberband.h \
   /Users/akatsuki/Qt/6.11.0/macos/lib/QtWidgets.framework/Versions/A/Headers/qsizepolicy.h \
-  /Users/akatsuki/Qt/6.11.0/macos/lib/QtWidgets.framework/Versions/A/Headers/qslider.h \
-  /Users/akatsuki/Qt/6.11.0/macos/lib/QtWidgets.framework/Versions/A/Headers/qstackedwidget.h \
-  /Users/akatsuki/Qt/6.11.0/macos/lib/QtWidgets.framework/Versions/A/Headers/qstyle.h \
-  /Users/akatsuki/Qt/6.11.0/macos/lib/QtWidgets.framework/Versions/A/Headers/qstyleoption.h \
-  /Users/akatsuki/Qt/6.11.0/macos/lib/QtWidgets.framework/Versions/A/Headers/qtabbar.h \
-  /Users/akatsuki/Qt/6.11.0/macos/lib/QtWidgets.framework/Versions/A/Headers/qtabwidget.h \
   /Users/akatsuki/Qt/6.11.0/macos/lib/QtWidgets.framework/Versions/A/Headers/qtwidgets-config.h \
   /Users/akatsuki/Qt/6.11.0/macos/lib/QtWidgets.framework/Versions/A/Headers/qtwidgetsexports.h \
   /Users/akatsuki/Qt/6.11.0/macos/lib/QtWidgets.framework/Versions/A/Headers/qtwidgetsglobal.h \

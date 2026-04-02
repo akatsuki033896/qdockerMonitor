@@ -1001,6 +1001,8 @@ SystemMonitor_autogen/timestamp: \
 	/Users/akatsuki/Desktop/SystemMonitor/container.h \
 	/Users/akatsuki/Desktop/SystemMonitor/containerManager.cpp \
 	/Users/akatsuki/Desktop/SystemMonitor/containerManager.h \
+	/Users/akatsuki/Desktop/SystemMonitor/containerpage.cpp \
+	/Users/akatsuki/Desktop/SystemMonitor/containerpage.h \
 	/Users/akatsuki/Desktop/SystemMonitor/json.hpp \
 	/Users/akatsuki/Desktop/SystemMonitor/main.cpp \
 	/Users/akatsuki/Desktop/SystemMonitor/mainwindow.cpp \
@@ -1018,6 +1020,7 @@ SystemMonitor_autogen/timestamp: \
 	/Users/akatsuki/Qt/6.11.0/macos/lib/QtCore.framework/Versions/A/Headers/q20utility.h \
 	/Users/akatsuki/Qt/6.11.0/macos/lib/QtCore.framework/Versions/A/Headers/q23type_traits.h \
 	/Users/akatsuki/Qt/6.11.0/macos/lib/QtCore.framework/Versions/A/Headers/q23utility.h \
+	/Users/akatsuki/Qt/6.11.0/macos/lib/QtCore.framework/Versions/A/Headers/qabstractitemmodel.h \
 	/Users/akatsuki/Qt/6.11.0/macos/lib/QtCore.framework/Versions/A/Headers/qalgorithms.h \
 	/Users/akatsuki/Qt/6.11.0/macos/lib/QtCore.framework/Versions/A/Headers/qalloc.h \
 	/Users/akatsuki/Qt/6.11.0/macos/lib/QtCore.framework/Versions/A/Headers/qanystringview.h \
@@ -1060,12 +1063,15 @@ SystemMonitor_autogen/timestamp: \
 	/Users/akatsuki/Qt/6.11.0/macos/lib/QtCore.framework/Versions/A/Headers/qglobalstatic.h \
 	/Users/akatsuki/Qt/6.11.0/macos/lib/QtCore.framework/Versions/A/Headers/qhash.h \
 	/Users/akatsuki/Qt/6.11.0/macos/lib/QtCore.framework/Versions/A/Headers/qhashfunctions.h \
+	/Users/akatsuki/Qt/6.11.0/macos/lib/QtCore.framework/Versions/A/Headers/qiodevice.h \
 	/Users/akatsuki/Qt/6.11.0/macos/lib/QtCore.framework/Versions/A/Headers/qiodevicebase.h \
+	/Users/akatsuki/Qt/6.11.0/macos/lib/QtCore.framework/Versions/A/Headers/qitemselectionmodel.h \
 	/Users/akatsuki/Qt/6.11.0/macos/lib/QtCore.framework/Versions/A/Headers/qiterable.h \
 	/Users/akatsuki/Qt/6.11.0/macos/lib/QtCore.framework/Versions/A/Headers/qiterator.h \
 	/Users/akatsuki/Qt/6.11.0/macos/lib/QtCore.framework/Versions/A/Headers/qlatin1stringview.h \
 	/Users/akatsuki/Qt/6.11.0/macos/lib/QtCore.framework/Versions/A/Headers/qline.h \
 	/Users/akatsuki/Qt/6.11.0/macos/lib/QtCore.framework/Versions/A/Headers/qlist.h \
+	/Users/akatsuki/Qt/6.11.0/macos/lib/QtCore.framework/Versions/A/Headers/qlocale.h \
 	/Users/akatsuki/Qt/6.11.0/macos/lib/QtCore.framework/Versions/A/Headers/qlogging.h \
 	/Users/akatsuki/Qt/6.11.0/macos/lib/QtCore.framework/Versions/A/Headers/qmalloc.h \
 	/Users/akatsuki/Qt/6.11.0/macos/lib/QtCore.framework/Versions/A/Headers/qmap.h \
@@ -1086,6 +1092,7 @@ SystemMonitor_autogen/timestamp: \
 	/Users/akatsuki/Qt/6.11.0/macos/lib/QtCore.framework/Versions/A/Headers/qprocessordetection.h \
 	/Users/akatsuki/Qt/6.11.0/macos/lib/QtCore.framework/Versions/A/Headers/qrect.h \
 	/Users/akatsuki/Qt/6.11.0/macos/lib/QtCore.framework/Versions/A/Headers/qrefcount.h \
+	/Users/akatsuki/Qt/6.11.0/macos/lib/QtCore.framework/Versions/A/Headers/qregularexpression.h \
 	/Users/akatsuki/Qt/6.11.0/macos/lib/QtCore.framework/Versions/A/Headers/qscopedpointer.h \
 	/Users/akatsuki/Qt/6.11.0/macos/lib/QtCore.framework/Versions/A/Headers/qscopeguard.h \
 	/Users/akatsuki/Qt/6.11.0/macos/lib/QtCore.framework/Versions/A/Headers/qset.h \
@@ -1131,6 +1138,7 @@ SystemMonitor_autogen/timestamp: \
 	/Users/akatsuki/Qt/6.11.0/macos/lib/QtCore.framework/Versions/A/Headers/qtversionchecks.h \
 	/Users/akatsuki/Qt/6.11.0/macos/lib/QtCore.framework/Versions/A/Headers/qtypeinfo.h \
 	/Users/akatsuki/Qt/6.11.0/macos/lib/QtCore.framework/Versions/A/Headers/qtypes.h \
+	/Users/akatsuki/Qt/6.11.0/macos/lib/QtCore.framework/Versions/A/Headers/qurl.h \
 	/Users/akatsuki/Qt/6.11.0/macos/lib/QtCore.framework/Versions/A/Headers/qutf8stringview.h \
 	/Users/akatsuki/Qt/6.11.0/macos/lib/QtCore.framework/Versions/A/Headers/qvariant.h \
 	/Users/akatsuki/Qt/6.11.0/macos/lib/QtCore.framework/Versions/A/Headers/qvarlengtharray.h \
@@ -1151,20 +1159,40 @@ SystemMonitor_autogen/timestamp: \
 	/Users/akatsuki/Qt/6.11.0/macos/lib/QtGui.framework/Versions/A/Headers/qkeysequence.h \
 	/Users/akatsuki/Qt/6.11.0/macos/lib/QtGui.framework/Versions/A/Headers/qpaintdevice.h \
 	/Users/akatsuki/Qt/6.11.0/macos/lib/QtGui.framework/Versions/A/Headers/qpalette.h \
+	/Users/akatsuki/Qt/6.11.0/macos/lib/QtGui.framework/Versions/A/Headers/qpicture.h \
 	/Users/akatsuki/Qt/6.11.0/macos/lib/QtGui.framework/Versions/A/Headers/qpixelformat.h \
 	/Users/akatsuki/Qt/6.11.0/macos/lib/QtGui.framework/Versions/A/Headers/qpixmap.h \
 	/Users/akatsuki/Qt/6.11.0/macos/lib/QtGui.framework/Versions/A/Headers/qpolygon.h \
 	/Users/akatsuki/Qt/6.11.0/macos/lib/QtGui.framework/Versions/A/Headers/qregion.h \
 	/Users/akatsuki/Qt/6.11.0/macos/lib/QtGui.framework/Versions/A/Headers/qrgb.h \
 	/Users/akatsuki/Qt/6.11.0/macos/lib/QtGui.framework/Versions/A/Headers/qrgba64.h \
+	/Users/akatsuki/Qt/6.11.0/macos/lib/QtGui.framework/Versions/A/Headers/qtextdocument.h \
 	/Users/akatsuki/Qt/6.11.0/macos/lib/QtGui.framework/Versions/A/Headers/qtgui-config.h \
 	/Users/akatsuki/Qt/6.11.0/macos/lib/QtGui.framework/Versions/A/Headers/qtguiexports.h \
 	/Users/akatsuki/Qt/6.11.0/macos/lib/QtGui.framework/Versions/A/Headers/qtguiglobal.h \
 	/Users/akatsuki/Qt/6.11.0/macos/lib/QtGui.framework/Versions/A/Headers/qtransform.h \
+	/Users/akatsuki/Qt/6.11.0/macos/lib/QtGui.framework/Versions/A/Headers/qvalidator.h \
 	/Users/akatsuki/Qt/6.11.0/macos/lib/QtGui.framework/Versions/A/Headers/qwindowdefs.h \
+	/Users/akatsuki/Qt/6.11.0/macos/lib/QtWidgets.framework/Versions/A/Headers/QLabel \
 	/Users/akatsuki/Qt/6.11.0/macos/lib/QtWidgets.framework/Versions/A/Headers/QMainWindow \
+	/Users/akatsuki/Qt/6.11.0/macos/lib/QtWidgets.framework/Versions/A/Headers/qabstractitemdelegate.h \
+	/Users/akatsuki/Qt/6.11.0/macos/lib/QtWidgets.framework/Versions/A/Headers/qabstractitemview.h \
+	/Users/akatsuki/Qt/6.11.0/macos/lib/QtWidgets.framework/Versions/A/Headers/qabstractscrollarea.h \
+	/Users/akatsuki/Qt/6.11.0/macos/lib/QtWidgets.framework/Versions/A/Headers/qabstractslider.h \
+	/Users/akatsuki/Qt/6.11.0/macos/lib/QtWidgets.framework/Versions/A/Headers/qabstractspinbox.h \
+	/Users/akatsuki/Qt/6.11.0/macos/lib/QtWidgets.framework/Versions/A/Headers/qframe.h \
+	/Users/akatsuki/Qt/6.11.0/macos/lib/QtWidgets.framework/Versions/A/Headers/qlabel.h \
+	/Users/akatsuki/Qt/6.11.0/macos/lib/QtWidgets.framework/Versions/A/Headers/qlistview.h \
+	/Users/akatsuki/Qt/6.11.0/macos/lib/QtWidgets.framework/Versions/A/Headers/qlistwidget.h \
 	/Users/akatsuki/Qt/6.11.0/macos/lib/QtWidgets.framework/Versions/A/Headers/qmainwindow.h \
+	/Users/akatsuki/Qt/6.11.0/macos/lib/QtWidgets.framework/Versions/A/Headers/qprogressbar.h \
+	/Users/akatsuki/Qt/6.11.0/macos/lib/QtWidgets.framework/Versions/A/Headers/qrubberband.h \
 	/Users/akatsuki/Qt/6.11.0/macos/lib/QtWidgets.framework/Versions/A/Headers/qsizepolicy.h \
+	/Users/akatsuki/Qt/6.11.0/macos/lib/QtWidgets.framework/Versions/A/Headers/qslider.h \
+	/Users/akatsuki/Qt/6.11.0/macos/lib/QtWidgets.framework/Versions/A/Headers/qstackedwidget.h \
+	/Users/akatsuki/Qt/6.11.0/macos/lib/QtWidgets.framework/Versions/A/Headers/qstyle.h \
+	/Users/akatsuki/Qt/6.11.0/macos/lib/QtWidgets.framework/Versions/A/Headers/qstyleoption.h \
+	/Users/akatsuki/Qt/6.11.0/macos/lib/QtWidgets.framework/Versions/A/Headers/qtabbar.h \
 	/Users/akatsuki/Qt/6.11.0/macos/lib/QtWidgets.framework/Versions/A/Headers/qtabwidget.h \
 	/Users/akatsuki/Qt/6.11.0/macos/lib/QtWidgets.framework/Versions/A/Headers/qtwidgets-config.h \
 	/Users/akatsuki/Qt/6.11.0/macos/lib/QtWidgets.framework/Versions/A/Headers/qtwidgetsexports.h \
@@ -1382,81 +1410,23 @@ SystemMonitor_autogen/timestamp: \
 	/Users/akatsuki/Qt/6.11.0/macos/lib/cmake/Qt6WidgetsTools/Qt6WidgetsToolsTargets.cmake \
 	/Users/akatsuki/Qt/6.11.0/macos/lib/cmake/Qt6WidgetsTools/Qt6WidgetsToolsTargetsPrecheck.cmake \
 	/Users/akatsuki/Qt/6.11.0/macos/lib/cmake/Qt6WidgetsTools/Qt6WidgetsToolsVersionlessTargets.cmake \
-	/opt/homebrew/share/cmake/Modules/CMakeCXXCompiler.cmake.in \
-	/opt/homebrew/share/cmake/Modules/CMakeCXXCompilerABI.cpp \
 	/opt/homebrew/share/cmake/Modules/CMakeCXXInformation.cmake \
 	/opt/homebrew/share/cmake/Modules/CMakeCheckCompilerFlagCommonPatterns.cmake \
 	/opt/homebrew/share/cmake/Modules/CMakeCommonLanguageInclude.cmake \
-	/opt/homebrew/share/cmake/Modules/CMakeCompilerIdDetection.cmake \
-	/opt/homebrew/share/cmake/Modules/CMakeDetermineCXXCompiler.cmake \
-	/opt/homebrew/share/cmake/Modules/CMakeDetermineCompiler.cmake \
-	/opt/homebrew/share/cmake/Modules/CMakeDetermineCompilerABI.cmake \
-	/opt/homebrew/share/cmake/Modules/CMakeDetermineCompilerId.cmake \
-	/opt/homebrew/share/cmake/Modules/CMakeDetermineCompilerSupport.cmake \
-	/opt/homebrew/share/cmake/Modules/CMakeDetermineSystem.cmake \
-	/opt/homebrew/share/cmake/Modules/CMakeFindBinUtils.cmake \
 	/opt/homebrew/share/cmake/Modules/CMakeFindDependencyMacro.cmake \
 	/opt/homebrew/share/cmake/Modules/CMakeGenericSystem.cmake \
 	/opt/homebrew/share/cmake/Modules/CMakeInitializeConfigs.cmake \
 	/opt/homebrew/share/cmake/Modules/CMakeLanguageInformation.cmake \
-	/opt/homebrew/share/cmake/Modules/CMakeParseImplicitIncludeInfo.cmake \
-	/opt/homebrew/share/cmake/Modules/CMakeParseImplicitLinkInfo.cmake \
-	/opt/homebrew/share/cmake/Modules/CMakeParseLibraryArchitecture.cmake \
-	/opt/homebrew/share/cmake/Modules/CMakeSystem.cmake.in \
 	/opt/homebrew/share/cmake/Modules/CMakeSystemSpecificInformation.cmake \
 	/opt/homebrew/share/cmake/Modules/CMakeSystemSpecificInitialize.cmake \
-	/opt/homebrew/share/cmake/Modules/CMakeTestCXXCompiler.cmake \
-	/opt/homebrew/share/cmake/Modules/CMakeTestCompilerCommon.cmake \
-	/opt/homebrew/share/cmake/Modules/CMakeUnixFindMake.cmake \
 	/opt/homebrew/share/cmake/Modules/CheckCXXCompilerFlag.cmake \
 	/opt/homebrew/share/cmake/Modules/CheckCXXSourceCompiles.cmake \
 	/opt/homebrew/share/cmake/Modules/CheckIncludeFileCXX.cmake \
 	/opt/homebrew/share/cmake/Modules/CheckLibraryExists.cmake \
-	/opt/homebrew/share/cmake/Modules/Compiler/ADSP-DetermineCompiler.cmake \
-	/opt/homebrew/share/cmake/Modules/Compiler/ARMCC-DetermineCompiler.cmake \
-	/opt/homebrew/share/cmake/Modules/Compiler/ARMClang-DetermineCompiler.cmake \
 	/opt/homebrew/share/cmake/Modules/Compiler/AppleClang-CXX.cmake \
-	/opt/homebrew/share/cmake/Modules/Compiler/AppleClang-DetermineCompiler.cmake \
-	/opt/homebrew/share/cmake/Modules/Compiler/Borland-DetermineCompiler.cmake \
 	/opt/homebrew/share/cmake/Modules/Compiler/CMakeCommonCompilerMacros.cmake \
-	/opt/homebrew/share/cmake/Modules/Compiler/Clang-DetermineCompiler.cmake \
-	/opt/homebrew/share/cmake/Modules/Compiler/Clang-DetermineCompilerInternal.cmake \
 	/opt/homebrew/share/cmake/Modules/Compiler/Clang.cmake \
-	/opt/homebrew/share/cmake/Modules/Compiler/Compaq-CXX-DetermineCompiler.cmake \
-	/opt/homebrew/share/cmake/Modules/Compiler/Cray-DetermineCompiler.cmake \
-	/opt/homebrew/share/cmake/Modules/Compiler/CrayClang-DetermineCompiler.cmake \
-	/opt/homebrew/share/cmake/Modules/Compiler/Diab-DetermineCompiler.cmake \
-	/opt/homebrew/share/cmake/Modules/Compiler/Embarcadero-DetermineCompiler.cmake \
-	/opt/homebrew/share/cmake/Modules/Compiler/Fujitsu-DetermineCompiler.cmake \
-	/opt/homebrew/share/cmake/Modules/Compiler/FujitsuClang-DetermineCompiler.cmake \
-	/opt/homebrew/share/cmake/Modules/Compiler/GHS-DetermineCompiler.cmake \
-	/opt/homebrew/share/cmake/Modules/Compiler/GNU-CXX-DetermineCompiler.cmake \
 	/opt/homebrew/share/cmake/Modules/Compiler/GNU.cmake \
-	/opt/homebrew/share/cmake/Modules/Compiler/HP-CXX-DetermineCompiler.cmake \
-	/opt/homebrew/share/cmake/Modules/Compiler/IAR-DetermineCompiler.cmake \
-	/opt/homebrew/share/cmake/Modules/Compiler/IBMCPP-CXX-DetermineVersionInternal.cmake \
-	/opt/homebrew/share/cmake/Modules/Compiler/IBMClang-CXX-DetermineCompiler.cmake \
-	/opt/homebrew/share/cmake/Modules/Compiler/Intel-DetermineCompiler.cmake \
-	/opt/homebrew/share/cmake/Modules/Compiler/IntelLLVM-DetermineCompiler.cmake \
-	/opt/homebrew/share/cmake/Modules/Compiler/LCC-CXX-DetermineCompiler.cmake \
-	/opt/homebrew/share/cmake/Modules/Compiler/MSVC-DetermineCompiler.cmake \
-	/opt/homebrew/share/cmake/Modules/Compiler/NVHPC-DetermineCompiler.cmake \
-	/opt/homebrew/share/cmake/Modules/Compiler/NVIDIA-DetermineCompiler.cmake \
-	/opt/homebrew/share/cmake/Modules/Compiler/OpenWatcom-DetermineCompiler.cmake \
-	/opt/homebrew/share/cmake/Modules/Compiler/OrangeC-DetermineCompiler.cmake \
-	/opt/homebrew/share/cmake/Modules/Compiler/PGI-DetermineCompiler.cmake \
-	/opt/homebrew/share/cmake/Modules/Compiler/PathScale-DetermineCompiler.cmake \
-	/opt/homebrew/share/cmake/Modules/Compiler/Renesas-DetermineCompiler.cmake \
-	/opt/homebrew/share/cmake/Modules/Compiler/SCO-DetermineCompiler.cmake \
-	/opt/homebrew/share/cmake/Modules/Compiler/SunPro-CXX-DetermineCompiler.cmake \
-	/opt/homebrew/share/cmake/Modules/Compiler/TI-DetermineCompiler.cmake \
-	/opt/homebrew/share/cmake/Modules/Compiler/TIClang-DetermineCompiler.cmake \
-	/opt/homebrew/share/cmake/Modules/Compiler/Tasking-DetermineCompiler.cmake \
-	/opt/homebrew/share/cmake/Modules/Compiler/VisualAge-CXX-DetermineCompiler.cmake \
-	/opt/homebrew/share/cmake/Modules/Compiler/Watcom-DetermineCompiler.cmake \
-	/opt/homebrew/share/cmake/Modules/Compiler/XL-CXX-DetermineCompiler.cmake \
-	/opt/homebrew/share/cmake/Modules/Compiler/XLClang-CXX-DetermineCompiler.cmake \
-	/opt/homebrew/share/cmake/Modules/Compiler/zOS-CXX-DetermineCompiler.cmake \
 	/opt/homebrew/share/cmake/Modules/FindOpenGL.cmake \
 	/opt/homebrew/share/cmake/Modules/FindPackageHandleStandardArgs.cmake \
 	/opt/homebrew/share/cmake/Modules/FindPackageMessage.cmake \
@@ -1464,19 +1434,15 @@ SystemMonitor_autogen/timestamp: \
 	/opt/homebrew/share/cmake/Modules/GNUInstallDirs.cmake \
 	/opt/homebrew/share/cmake/Modules/Internal/CMakeCXXLinkerInformation.cmake \
 	/opt/homebrew/share/cmake/Modules/Internal/CMakeCommonLinkerInformation.cmake \
-	/opt/homebrew/share/cmake/Modules/Internal/CMakeDetermineLinkerId.cmake \
-	/opt/homebrew/share/cmake/Modules/Internal/CMakeInspectCXXLinker.cmake \
 	/opt/homebrew/share/cmake/Modules/Internal/CheckCompilerFlag.cmake \
 	/opt/homebrew/share/cmake/Modules/Internal/CheckFlagCommonConfig.cmake \
 	/opt/homebrew/share/cmake/Modules/Internal/CheckSourceCompiles.cmake \
-	/opt/homebrew/share/cmake/Modules/Internal/FeatureTesting.cmake \
 	/opt/homebrew/share/cmake/Modules/Linker/AppleClang-CXX.cmake \
 	/opt/homebrew/share/cmake/Modules/Linker/AppleClang.cmake \
 	/opt/homebrew/share/cmake/Modules/MacroAddFileDependencies.cmake \
 	/opt/homebrew/share/cmake/Modules/Platform/Apple-AppleClang-CXX.cmake \
 	/opt/homebrew/share/cmake/Modules/Platform/Apple-Clang-CXX.cmake \
 	/opt/homebrew/share/cmake/Modules/Platform/Apple-Clang.cmake \
-	/opt/homebrew/share/cmake/Modules/Platform/Darwin-Determine-CXX.cmake \
 	/opt/homebrew/share/cmake/Modules/Platform/Darwin-Initialize.cmake \
 	/opt/homebrew/share/cmake/Modules/Platform/Darwin.cmake \
 	/opt/homebrew/share/cmake/Modules/Platform/Linker/Apple-AppleClang-CXX.cmake \

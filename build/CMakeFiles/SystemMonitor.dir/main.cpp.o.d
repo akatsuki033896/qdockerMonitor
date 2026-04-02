@@ -1181,14 +1181,15 @@ CMakeFiles/SystemMonitor.dir/main.cpp.o: \
   /Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include/c++/v1/__charconv/from_chars_integral.h \
   /Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include/c++/v1/__charconv/to_chars.h \
   /Users/akatsuki/Desktop/SystemMonitor/mainwindow.h \
-  /Users/akatsuki/Qt/6.11.0/macos/lib/QtWidgets.framework/Headers/QMainWindow \
-  /Users/akatsuki/Qt/6.11.0/macos/lib/QtWidgets.framework/Headers/qmainwindow.h \
+  /Users/akatsuki/Desktop/SystemMonitor/containerpage.h \
+  /Users/akatsuki/Qt/6.11.0/macos/lib/QtWidgets.framework/Headers/qlabel.h \
   /Users/akatsuki/Qt/6.11.0/macos/lib/QtWidgets.framework/Headers/qtwidgetsglobal.h \
   /Users/akatsuki/Qt/6.11.0/macos/lib/QtGui.framework/Headers/qtguiglobal.h \
   /Users/akatsuki/Qt/6.11.0/macos/lib/QtGui.framework/Headers/qtgui-config.h \
   /Users/akatsuki/Qt/6.11.0/macos/lib/QtGui.framework/Headers/qtguiexports.h \
   /Users/akatsuki/Qt/6.11.0/macos/lib/QtWidgets.framework/Headers/qtwidgets-config.h \
   /Users/akatsuki/Qt/6.11.0/macos/lib/QtWidgets.framework/Headers/qtwidgetsexports.h \
+  /Users/akatsuki/Qt/6.11.0/macos/lib/QtWidgets.framework/Headers/qframe.h \
   /Users/akatsuki/Qt/6.11.0/macos/lib/QtWidgets.framework/Headers/qwidget.h \
   /Users/akatsuki/Qt/6.11.0/macos/lib/QtGui.framework/Headers/qwindowdefs.h \
   /Users/akatsuki/Qt/6.11.0/macos/lib/QtCore.framework/Headers/qmargins.h \
@@ -1240,7 +1241,33 @@ CMakeFiles/SystemMonitor.dir/main.cpp.o: \
   /Users/akatsuki/Qt/6.11.0/macos/lib/QtWidgets.framework/Headers/qsizepolicy.h \
   /Users/akatsuki/Qt/6.11.0/macos/lib/QtGui.framework/Headers/qcursor.h \
   /Users/akatsuki/Qt/6.11.0/macos/lib/QtGui.framework/Headers/qbitmap.h \
+  /Users/akatsuki/Qt/6.11.0/macos/lib/QtGui.framework/Headers/qpicture.h \
+  /Users/akatsuki/Qt/6.11.0/macos/lib/QtCore.framework/Headers/qiodevice.h \
+  /Users/akatsuki/Qt/6.11.0/macos/lib/QtGui.framework/Headers/qtextdocument.h \
+  /Users/akatsuki/Qt/6.11.0/macos/lib/QtCore.framework/Headers/qurl.h \
+  /Users/akatsuki/Qt/6.11.0/macos/lib/QtWidgets.framework/Headers/qprogressbar.h \
+  /Users/akatsuki/Qt/6.11.0/macos/lib/QtWidgets.framework/Headers/QLabel \
+  /Users/akatsuki/Qt/6.11.0/macos/lib/QtWidgets.framework/Headers/QMainWindow \
+  /Users/akatsuki/Qt/6.11.0/macos/lib/QtWidgets.framework/Headers/qmainwindow.h \
   /Users/akatsuki/Qt/6.11.0/macos/lib/QtWidgets.framework/Headers/qtabwidget.h \
+  /Users/akatsuki/Qt/6.11.0/macos/lib/QtWidgets.framework/Headers/qlistwidget.h \
+  /Users/akatsuki/Qt/6.11.0/macos/lib/QtWidgets.framework/Headers/qlistview.h \
+  /Users/akatsuki/Qt/6.11.0/macos/lib/QtWidgets.framework/Headers/qabstractitemview.h \
+  /Users/akatsuki/Qt/6.11.0/macos/lib/QtWidgets.framework/Headers/qabstractscrollarea.h \
+  /Users/akatsuki/Qt/6.11.0/macos/lib/QtCore.framework/Headers/qabstractitemmodel.h \
+  /Users/akatsuki/Qt/6.11.0/macos/lib/QtCore.framework/Headers/qitemselectionmodel.h \
+  /Users/akatsuki/Qt/6.11.0/macos/lib/QtWidgets.framework/Headers/qabstractitemdelegate.h \
+  /Users/akatsuki/Qt/6.11.0/macos/lib/QtWidgets.framework/Headers/qstyleoption.h \
+  /Users/akatsuki/Qt/6.11.0/macos/lib/QtCore.framework/Headers/qlocale.h \
+  /Users/akatsuki/Qt/6.11.0/macos/lib/QtWidgets.framework/Headers/qabstractspinbox.h \
+  /Users/akatsuki/Qt/6.11.0/macos/lib/QtGui.framework/Headers/qvalidator.h \
+  /Users/akatsuki/Qt/6.11.0/macos/lib/QtCore.framework/Headers/qregularexpression.h \
+  /Users/akatsuki/Qt/6.11.0/macos/lib/QtWidgets.framework/Headers/qslider.h \
+  /Users/akatsuki/Qt/6.11.0/macos/lib/QtWidgets.framework/Headers/qabstractslider.h \
+  /Users/akatsuki/Qt/6.11.0/macos/lib/QtWidgets.framework/Headers/qstyle.h \
+  /Users/akatsuki/Qt/6.11.0/macos/lib/QtWidgets.framework/Headers/qtabbar.h \
+  /Users/akatsuki/Qt/6.11.0/macos/lib/QtWidgets.framework/Headers/qrubberband.h \
+  /Users/akatsuki/Qt/6.11.0/macos/lib/QtWidgets.framework/Headers/qstackedwidget.h \
   /Users/akatsuki/Qt/6.11.0/macos/lib/QtWidgets.framework/Headers/QApplication \
   /Users/akatsuki/Qt/6.11.0/macos/lib/QtWidgets.framework/Headers/qapplication.h \
   /Users/akatsuki/Qt/6.11.0/macos/lib/QtCore.framework/Headers/qcoreapplication.h \
@@ -1253,7 +1280,6 @@ CMakeFiles/SystemMonitor.dir/main.cpp.o: \
   /Users/akatsuki/Qt/6.11.0/macos/lib/QtCore.framework/Headers/qcoreapplication_platform.h \
   /Users/akatsuki/Qt/6.11.0/macos/lib/QtGui.framework/Headers/qguiapplication.h \
   /Users/akatsuki/Qt/6.11.0/macos/lib/QtGui.framework/Headers/qinputmethod.h \
-  /Users/akatsuki/Qt/6.11.0/macos/lib/QtCore.framework/Headers/qlocale.h \
   /Users/akatsuki/Qt/6.11.0/macos/lib/QtGui.framework/Headers/qguiapplication_platform.h \
   /Users/akatsuki/Qt/6.11.0/macos/lib/QtCore.framework/Headers/qtimer.h \
   /Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include/c++/v1/iostream \

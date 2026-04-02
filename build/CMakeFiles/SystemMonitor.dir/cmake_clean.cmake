@@ -6,6 +6,8 @@ file(REMOVE_RECURSE
   "CMakeFiles/SystemMonitor.dir/SystemMonitor_autogen/mocs_compilation.cpp.o.d"
   "CMakeFiles/SystemMonitor.dir/containerManager.cpp.o"
   "CMakeFiles/SystemMonitor.dir/containerManager.cpp.o.d"
+  "CMakeFiles/SystemMonitor.dir/containerpage.cpp.o"
+  "CMakeFiles/SystemMonitor.dir/containerpage.cpp.o.d"
   "CMakeFiles/SystemMonitor.dir/main.cpp.o"
   "CMakeFiles/SystemMonitor.dir/main.cpp.o.d"
   "CMakeFiles/SystemMonitor.dir/mainwindow.cpp.o"

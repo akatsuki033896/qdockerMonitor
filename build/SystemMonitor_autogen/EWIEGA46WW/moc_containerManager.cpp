@@ -39,16 +39,23 @@ template <> constexpr inline auto ContainerManager::qt_create_metaobjectdata<qt_
     namespace QMC = QtMocConstants;
     QtMocHelpers::StringRefStorage qt_stringData {
         "ContainerManager",
-        "containerUpdated",
+        "ContainerListChanged",
         "",
         "std::vector<Container>",
-        "list"
+        "list",
+        "ContainerStatsUpdated",
+        "Container",
+        "con"
     };
 
     QtMocHelpers::UintData qt_methods {
-        // Signal 'containerUpdated'
+        // Signal 'ContainerListChanged'
         QtMocHelpers::SignalData<void(const std::vector<Container> &)>(1, 2, QMC::AccessPublic, QMetaType::Void, {{
             { 0x80000000 | 3, 4 },
+        }}),
+        // Signal 'ContainerStatsUpdated'
+        QtMocHelpers::SignalData<void(const Container &)>(5, 2, QMC::AccessPublic, QMetaType::Void, {{
+            { 0x80000000 | 6, 7 },
         }}),
     };
     QtMocHelpers::UintData qt_properties {
@@ -73,12 +80,15 @@ void ContainerManager::qt_static_metacall(QObject *_o, QMetaObject::Call _c, int
     auto *_t = static_cast<ContainerManager *>(_o);
     if (_c == QMetaObject::InvokeMetaMethod) {
         switch (_id) {
-        case 0: _t->containerUpdated((*reinterpret_cast<std::add_pointer_t<std::vector<Container>>>(_a[1]))); break;
+        case 0: _t->ContainerListChanged((*reinterpret_cast<std::add_pointer_t<std::vector<Container>>>(_a[1]))); break;
+        case 1: _t->ContainerStatsUpdated((*reinterpret_cast<std::add_pointer_t<Container>>(_a[1]))); break;
         default: ;
         }
     }
     if (_c == QMetaObject::IndexOfMethod) {
-        if (QtMocHelpers::indexOfMethod<void (ContainerManager::*)(const std::vector<Container> & )>(_a, &ContainerManager::containerUpdated, 0))
+        if (QtMocHelpers::indexOfMethod<void (ContainerManager::*)(const std::vector<Container> & )>(_a, &ContainerManager::ContainerListChanged, 0))
+            return;
+        if (QtMocHelpers::indexOfMethod<void (ContainerManager::*)(const Container & )>(_a, &ContainerManager::ContainerStatsUpdated, 1))
             return;
     }
 }
@@ -102,21 +112,27 @@ int ContainerManager::qt_metacall(QMetaObject::Call _c, int _id, void **_a)
     if (_id < 0)
         return _id;
     if (_c == QMetaObject::InvokeMetaMethod) {
-        if (_id < 1)
+        if (_id < 2)
             qt_static_metacall(this, _c, _id, _a);
-        _id -= 1;
+        _id -= 2;
     }
     if (_c == QMetaObject::RegisterMethodArgumentMetaType) {
-        if (_id < 1)
+        if (_id < 2)
             *reinterpret_cast<QMetaType *>(_a[0]) = QMetaType();
-        _id -= 1;
+        _id -= 2;
     }
     return _id;
 }
 
 // SIGNAL 0
-void ContainerManager::containerUpdated(const std::vector<Container> & _t1)
+void ContainerManager::ContainerListChanged(const std::vector<Container> & _t1)
 {
     QMetaObject::activate<void>(this, &staticMetaObject, 0, nullptr, _t1);
+}
+
+// SIGNAL 1
+void ContainerManager::ContainerStatsUpdated(const Container & _t1)
+{
+    QMetaObject::activate<void>(this, &staticMetaObject, 1, nullptr, _t1);
 }
 QT_WARNING_POP

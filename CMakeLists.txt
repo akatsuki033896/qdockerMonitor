@@ -23,6 +23,8 @@ qt_add_executable(SystemMonitor
     util.cpp
     containerManager.h
     containerManager.cpp
+    containerpage.h
+    containerpage.cpp
 )
 
 target_link_libraries(SystemMonitor

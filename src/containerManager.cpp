@@ -4,7 +4,6 @@
 #include "util.h"
 #include <mutex>
 #include <qdebug.h>
-#include <iostream>
 
 ContainerManager::ContainerManager() {
     refresh();

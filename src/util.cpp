@@ -1,6 +1,6 @@
 #include "util.h"
 #include <iostream>
-#include "json.hpp"
+#include "../include/json.hpp"
 
 using json = nlohmann::json;
 

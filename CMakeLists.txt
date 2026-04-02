@@ -5,7 +5,6 @@ set(CMAKE_AUTOUIC ON)
 set(CMAKE_AUTORCC ON)
 
 project(SystemMonitor LANGUAGES CXX)
-
 find_package(Qt6 6.5 REQUIRED COMPONENTS Core Widgets)
 
 qt_standard_project_setup()
@@ -13,19 +12,21 @@ qt_standard_project_setup()
 qt_add_executable(SystemMonitor
     WIN32 MACOSX_BUNDLE
     main.cpp
-    mainwindow.cpp
-    mainwindow.h
-    json.hpp # https://github.com/nlohmann/json/releases
-    threadpool.cpp
-    threadpool.hpp
-    container.h
-    util.h
-    util.cpp
-    containerManager.h
-    containerManager.cpp
-    containerpage.h
-    containerpage.cpp
+    src/mainwindow.cpp
+    include/mainwindow.h
+    include/json.hpp # https://github.com/nlohmann/json/releases
+    src/threadpool.cpp
+    include/threadpool.hpp
+    include/container.h
+    include/util.h
+    src/util.cpp
+    include/containerManager.h
+    src/containerManager.cpp
+    include/containerpage.h
+    src/containerpage.cpp
 )
+
+target_include_directories(SystemMonitor PRIVATE ${CMAKE_SOURCE_DIR}/include)
 
 target_link_libraries(SystemMonitor
     PRIVATE

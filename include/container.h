@@ -15,6 +15,7 @@ struct Container {
 
     // 网络
     std::string ip;
+    std::string mac;
     std::map<std::string, std::string> ports;
 
     // 挂载地址 pair<src, dst>

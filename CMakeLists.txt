@@ -10,7 +10,7 @@ find_package(Qt6 6.5 REQUIRED COMPONENTS Core Widgets)
 qt_standard_project_setup()
 
 qt_add_executable(SystemMonitor
-    WIN32 MACOSX_BUNDLE
+    # WIN32 MACOSX_BUNDLE
     main.cpp
     src/mainwindow.cpp
     include/mainwindow.h
@@ -24,7 +24,16 @@ qt_add_executable(SystemMonitor
     src/containerManager.cpp
     include/containerpage.h
     src/containerpage.cpp
+    include/containerListPanel.h
+    src/containerListPanel.cpp
 )
+
+qt_add_resources(SystemMonitor "resources"
+    PREFIX "/"
+    FILES
+        style.qss
+)
+target_sources(SystemMonitor PRIVATE ${RESOURCES})
 
 target_include_directories(SystemMonitor PRIVATE ${CMAKE_SOURCE_DIR}/include)
 

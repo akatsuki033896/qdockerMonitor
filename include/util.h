@@ -1,7 +1,7 @@
 #pragma once
-#include <string>
 #include "container.h"
+#include <QString>
 
-std::string getInfo(std::string);
-void getStat(Container& c);
-void getInspect(Container& c);
+QString runDocker(const QStringList& args);
+bool getStat(Container& c);
+bool getInspect(Container& c);

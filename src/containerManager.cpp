@@ -4,6 +4,8 @@
 #include "util.h"
 #include <mutex>
 #include <qdebug.h>
+#include <QStringList>
+#include <QProcess>
 
 ContainerManager::ContainerManager() {
     refresh();
@@ -12,8 +14,10 @@ ContainerManager::ContainerManager() {
 void ContainerManager::refresh() {
     std::vector<Container> newList;
 
-    std::string list = getInfo("docker ps --format \"{{.ID}} {{.Names}}\""); // 获取容器ID列表
-    // std::cout << list << '\n';
+    QStringList args;
+    args << "ps" << "--format" << "{{.ID}} {{.Names}}";
+    QString output = runDocker(args);
+    std::string list = output.toStdString();
     std::istringstream iss(list);
     std::string id, name;
     while (iss >> id >> name) {

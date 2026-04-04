@@ -6,13 +6,13 @@
 #include <QtCore/qobject.h>
 #include <QtCore/qobjectdefs.h>
 #include <QtCore/qtimer.h>
-#include <cstddef>
-#include <cstdlib>
-#include <iostream>
-#include <unistd.h>
+// #include <unistd.h>
 #include "threadpool.hpp"
 #include <QTimer>
 #include "util.h"
+#include <QMessageBox>
+#include <QFile>
+
 
 // docker ps --format "{{.ID}} {{.Names}}"
 // docker stats --no-stream --format "{{.Container}} {{.CPUPerc}} {{.MemUsage}}"
@@ -22,8 +22,14 @@
 
 int main(int argc, char *argv[]) {
     QApplication app(argc, argv);
-    std::cout << "system monitor start running." << '\n';
+    qDebug() << "system monitor start running.";
 
+    QFile file(":/style.qss");  // 如果用资源文件
+    if (file.open(QFile::ReadOnly)) {
+        QString style = QLatin1String(file.readAll());
+        app.setStyleSheet(style);
+    }
+    
     ContainerManager manager;
     ThreadPool pool;
     QTimer timer;
@@ -54,7 +60,7 @@ int main(int argc, char *argv[]) {
         }
     });
 
-    timer.start(3000); // 3s 执行一次 事件驱动
+    timer.start(5000); // 5s 执行一次 事件驱动
 
     // GUI
 

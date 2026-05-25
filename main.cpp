@@ -6,12 +6,12 @@
 #include <QtCore/qobject.h>
 #include <QtCore/qobjectdefs.h>
 #include <QtCore/qtimer.h>
-// #include <unistd.h>
-#include "threadpool.hpp"
 #include <QTimer>
 #include "util.h"
 #include <QMessageBox>
 #include <QFile>
+#include <qthread.h>
+#include <qthreadpool.h>
 
 
 // docker ps --format "{{.ID}} {{.Names}}"
@@ -20,53 +20,51 @@
 // 待实现功能
 // docker top <container_ID> 容器内部进程监控
 
-int main(int argc, char *argv[]) {
-    QApplication app(argc, argv);
-    qDebug() << "system monitor start running.";
+ContainerManager manager;
+QThreadPool* tp = QThreadPool::globalInstance();
 
-    QFile file(":/style.qss");  // 如果用资源文件
-    if (file.open(QFile::ReadOnly)) {
-        QString style = QLatin1String(file.readAll());
-        app.setStyleSheet(style);
+void timer_task() {
+    manager.refresh();
+    auto list = manager.get_container_list();
+    std::vector<std::string> ids;
+    for (const auto& c : list) {
+        ids.push_back(c.id);
     }
-    
-    ContainerManager manager;
-    ThreadPool pool;
-    QTimer timer;
-
-    // 定时器定时刷新
-    QObject::connect(&timer, &QTimer::timeout, [&]() {
-        manager.refresh();
-
-        auto list = manager.get_container_list();
-
-        std::vector<std::string> ids;
-        for (const auto& c : list) {
-            ids.push_back(c.id);
-        }
-
-        for (const auto& id : ids) {
-            pool.addTask([id, mgr = &manager]() {
+    for (const auto& id : ids) {
+        tp->start(
+            [id, mng = &manager]() {
                 Container temp;
                 temp.id = id;
                 getStat(temp);
                 getInspect(temp);
-                // qDebug() << "before invoke";
-                QMetaObject::invokeMethod(mgr, [mgr, temp]() {
-                    // qDebug() << "invoke";
-                    mgr->update(temp);
+                QMetaObject::invokeMethod(mng, [mng, temp]() {
+                    mng->update(temp);
                 }, Qt::QueuedConnection);
-            });
-        }
-    });
+            }
+        );
+    }
+}
 
+int main(int argc, char *argv[]) {
+    QApplication app(argc, argv);
+    // set css
+    QFile file(":/style.qss");
+    if (file.open(QFile::ReadOnly)) {
+        QString style = QLatin1String(file.readAll());
+        app.setStyleSheet(style);
+    }
+
+    if (!isDockerRunning()) {
+        qDebug() << "Docker is not running";
+        QMessageBox::critical(nullptr, "Error", "Docker engine is not running!");
+        return -1;
+    }
+
+    QTimer timer; // 定时器定时刷新
+    QObject::connect(&timer, &QTimer::timeout, timer_task);
     timer.start(5000); // 5s 执行一次 事件驱动
-
-    // GUI
-
-    MainWindow win;
-    // 连接 UI
-     
+    
+    MainWindow win(&manager);
     QObject::connect(&manager, &ContainerManager::ContainerListChanged, &win, &MainWindow::onContainerListChanged);
     QObject::connect(&manager, &ContainerManager::ContainerStatsUpdated, &win, &MainWindow::onContainerStatsUpdated);
     win.show();

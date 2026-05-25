@@ -15,8 +15,6 @@ qt_add_executable(SystemMonitor
     src/mainwindow.cpp
     include/mainwindow.h
     include/json.hpp # https://github.com/nlohmann/json/releases
-    src/threadpool.cpp
-    include/threadpool.hpp
     include/container.h
     include/util.h
     src/util.cpp

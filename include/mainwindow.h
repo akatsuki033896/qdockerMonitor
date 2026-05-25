@@ -12,13 +12,12 @@
 
 class MainWindow : public QMainWindow {
     Q_OBJECT
-    // QListWidget* listPanel;
     ContainerListPanel* listPanel;
     QStackedWidget* stackedWidget;
     ContainerManager* manager;
     std::unordered_map<std::string, ContainerPage*> pages;
 public:
-    explicit MainWindow(QWidget *parent = nullptr);
+    explicit MainWindow(ContainerManager* mng, QWidget *parent = nullptr);
     void onContainersUpdated(const std::vector<Container>& list);
     ~MainWindow() override;
 public slots:

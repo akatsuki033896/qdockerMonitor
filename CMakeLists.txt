@@ -5,7 +5,7 @@ set(CMAKE_AUTOUIC ON)
 set(CMAKE_AUTORCC ON)
 
 project(SystemMonitor LANGUAGES CXX)
-find_package(Qt6 6.5 REQUIRED COMPONENTS Core Widgets)
+find_package(Qt6 6.5 REQUIRED COMPONENTS Core Widgets Charts)
 
 qt_standard_project_setup()
 
@@ -24,6 +24,8 @@ qt_add_executable(SystemMonitor
     src/containerpage.cpp
     include/containerListPanel.h
     src/containerListPanel.cpp
+    include/resChart.h
+    src/resChart.cpp
 )
 
 qt_add_resources(SystemMonitor "resources"
@@ -39,6 +41,7 @@ target_link_libraries(SystemMonitor
     PRIVATE
         Qt::Core
         Qt::Widgets
+        Qt::Charts
 )
 
 install(TARGETS SystemMonitor

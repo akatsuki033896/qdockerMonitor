@@ -8,7 +8,7 @@
 
 MainWindow::MainWindow(ContainerManager* mng, QWidget *parent) : QMainWindow(parent), manager(mng) {
     setWindowTitle("Container Monitor");
-    setMinimumSize(800, 650);
+    setMinimumSize(800, 1000);
     
     QWidget* central = new QWidget;
     QHBoxLayout* layout = new QHBoxLayout(central);

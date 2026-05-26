@@ -10,7 +10,7 @@ struct Container {
     std::string image;
 
     std::string status;
-    bool running;
+    bool running = false;
     std::string startedAt;
 
     // 网络

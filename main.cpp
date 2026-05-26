@@ -48,11 +48,11 @@ void timer_task() {
 int main(int argc, char *argv[]) {
     QApplication app(argc, argv);
     // set css
-    QFile file(":/style.qss");
-    if (file.open(QFile::ReadOnly)) {
-        QString style = QLatin1String(file.readAll());
-        app.setStyleSheet(style);
-    }
+    // QFile file(":/style.qss");
+    // if (file.open(QFile::ReadOnly)) {
+    //     QString style = QLatin1String(file.readAll());
+    //     app.setStyleSheet(style);
+    // }
 
     if (!isDockerRunning()) {
         qDebug() << "Docker is not running";

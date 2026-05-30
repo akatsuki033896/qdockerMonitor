@@ -5,6 +5,7 @@
 #include "containerManager.h"
 #include "containerpage.h"
 #include "containerListPanel.h"
+#include <QTabWidget>
 
 MainWindow::MainWindow(ContainerManager* mng, QWidget *parent) : QMainWindow(parent), manager(mng) {
     setWindowTitle("Container Monitor");
@@ -16,11 +17,9 @@ MainWindow::MainWindow(ContainerManager* mng, QWidget *parent) : QMainWindow(par
     // 左侧列表
     listPanel = new ContainerListPanel;
     listPanel->setFixedWidth(150);
-    
+    layout->addWidget(listPanel);
     // 右侧页面
     stackedWidget = new QStackedWidget;
-
-    layout->addWidget(listPanel);
     layout->addWidget(stackedWidget);
     setCentralWidget(central);
 

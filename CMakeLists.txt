@@ -26,6 +26,10 @@ qt_add_executable(SystemMonitor
     src/containerListPanel.cpp
     include/resChart.h
     src/resChart.cpp
+        include/detailPage.h
+        src/detailPage.cpp
+        src/processPage.cpp
+        include/processPage.h
 )
 
 qt_add_resources(SystemMonitor "resources"

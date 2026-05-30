@@ -5,20 +5,19 @@
 #include <QtCore/qdebug.h>
 #include <QtCore/qobject.h>
 #include <QtCore/qobjectdefs.h>
-#include <QtCore/qtimer.h>
 #include <QTimer>
 #include "util.h"
 #include <QMessageBox>
 #include <QFile>
-#include <qthread.h>
 #include <qthreadpool.h>
 
 
 // docker ps --format "{{.ID}} {{.Names}}"
 // docker stats --no-stream --format "{{.Container}} {{.CPUPerc}} {{.MemUsage}}"
+// docker top <container_ID>
 
-// 待实现功能
-// docker top <container_ID> 容器内部进程监控
+// TODO: button
+// TODO: File system
 
 ContainerManager manager;
 QThreadPool* tp = QThreadPool::globalInstance();
@@ -37,6 +36,7 @@ void timer_task() {
                 temp.id = id;
                 getStat(temp);
                 getInspect(temp);
+                getProcess(temp);
                 QMetaObject::invokeMethod(mng, [mng, temp]() {
                     mng->update(temp);
                 }, Qt::QueuedConnection);
@@ -48,11 +48,11 @@ void timer_task() {
 int main(int argc, char *argv[]) {
     QApplication app(argc, argv);
     // set css
-    // QFile file(":/style.qss");
-    // if (file.open(QFile::ReadOnly)) {
-    //     QString style = QLatin1String(file.readAll());
-    //     app.setStyleSheet(style);
-    // }
+    QFile file(":/style.qss");
+    if (file.open(QFile::ReadOnly)) {
+        QString style = QLatin1String(file.readAll());
+        app.setStyleSheet(style);
+    }
 
     if (!isDockerRunning()) {
         qDebug() << "Docker is not running";

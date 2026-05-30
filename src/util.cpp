@@ -6,6 +6,7 @@
 #include <qdebug.h>
 #include <qprocess.h>
 #include <string>
+#include <qregularExpression>
 
 using json = nlohmann::json;
 
@@ -22,7 +23,7 @@ bool isDockerRunning() {
     return true;
 }
 
-QString runDocker(const QStringList& args) {
+QString runDockerAPI(const QStringList& args) {
     QProcess process;
     process.start("docker", args);
     process.waitForFinished();
@@ -44,11 +45,11 @@ bool getStat(Container& c) {
 
     QStringList args;
     args << "stats" << QString::fromStdString(c.id) << "--no-stream" << "--format" << "{{json .}}";
-    QString output = runDocker(args).trimmed();
+    QString output = runDockerAPI(args).trimmed();
     std::string stats_str = output.toStdString();
     
     if (stats_str.empty()) {
-        std::cout << "stats empty for id: " << c.id << '\n';
+        qDebug() << "stats empty for id: " << c.id;
         return false;
     }
 
@@ -56,7 +57,7 @@ bool getStat(Container& c) {
     // c.id = j["Container"]; // long id
 
     if (j.empty()) {
-        std::cout << "inspect json empty for id: " << c.id << '\n';
+        qDebug() << "inspect json empty for id: " << c.id;
         return false;
     }
 
@@ -73,7 +74,7 @@ bool getStat(Container& c) {
 bool getInspect(Container& c) {
     c.ports.clear();
     c.mounts.clear();
-    QString output = runDocker({"inspect", QString::fromStdString(c.id)}).trimmed();
+    QString output = runDockerAPI({"inspect", QString::fromStdString(c.id)}).trimmed();
     std::string inspect_str = output.toStdString();
     if (inspect_str.empty()) {
         qDebug() << "inspect empty for id: " << c.id;
@@ -137,20 +138,40 @@ bool getInspect(Container& c) {
         }
     }
     // print container information
-    
-    // qDebug() << "Image: " << c.image;
-    // qDebug() << "Status: " << c.status;
-    // qDebug() << "Running: " << c.running;
-    // qDebug() << "StartedAt: " << c.startedAt;
-    // qDebug() << "IP: " << c.ip;
-    // qDebug() << "MAC: " << c.mac;
-    // qDebug() << "Ports: ";
-    // for (const auto& [container_port, host_port] : c.ports) {
-    //     qDebug() << "  " << container_port.c_str() << " -> " << host_port.c_str();
-    // }
-    // qDebug() << "Mounts: ";
-    // for (const auto& mount : c.mounts) {
-    //     qDebug() << "  " << mount.first.c_str() << " -> " << mount.second.c_str();
-    // }   
+    return true;
+}
+
+void printInfo(const Container& c)
+{
+    qDebug() << "Image: " << c.image;
+    qDebug() << "Status: " << c.status;
+    qDebug() << "Running: " << c.running;
+    qDebug() << "StartedAt: " << c.startedAt;
+    qDebug() << "IP: " << c.ip;
+    qDebug() << "MAC: " << c.mac;
+    qDebug() << "Ports: ";
+    for (const auto& [container_port, host_port] : c.ports) {
+        qDebug() << "  " << container_port.c_str() << " -> " << host_port.c_str();
+    }
+    qDebug() << "Mounts: ";
+    for (const auto& mount : c.mounts) {
+        qDebug() << "  " << mount.first.c_str() << " -> " << mount.second.c_str();
+    }
+}
+
+bool getProcess(const Container& c)
+{
+    if (c.id.empty()) {
+        qDebug() << "get id failed";
+        return false;
+    }
+    QString output = runDockerAPI({"top", QString::fromStdString(c.id)}).trimmed();
+    QStringList lines = output.split('\n', Qt::SkipEmptyParts);
+    for (int i = 1; i < lines.size(); i++)
+    {
+        QStringList cols = lines[i].split(QRegularExpression("\\s+"),
+                   Qt::SkipEmptyParts);
+        qDebug() << cols.join(" ") << "\n";
+    }
     return true;
 }

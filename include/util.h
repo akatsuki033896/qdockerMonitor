@@ -4,7 +4,7 @@
 #include <QLabel>
 
 bool isDockerRunning();
-QString runDockerAPI(const QStringList& args);
+QString runDockerCLI(const QStringList& args);
 bool getStat(Container& c);
 bool getInspect(Container& c);
 void printInfo(const Container& c);

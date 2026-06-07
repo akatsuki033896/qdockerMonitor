@@ -2,9 +2,9 @@
 #include <QtWidgets/qlistwidget.h>
 #include <QtWidgets>
 #include "container.h"
-#include "containerManager.h"
-#include "containerpage.h"
-#include "containerListPanel.h"
+#include "../ContainerManager/containerManager.h"
+#include "../ContainerPage/containerpage.h"
+#include "../ContainerListPanel/containerListPanel.h"
 #include <QTabWidget>
 
 MainWindow::MainWindow(ContainerManager* mng, QWidget *parent) : QMainWindow(parent), manager(mng) {

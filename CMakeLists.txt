@@ -5,7 +5,7 @@ set(CMAKE_AUTOUIC ON)
 set(CMAKE_AUTORCC ON)
 
 project(SystemMonitor LANGUAGES CXX)
-find_package(Qt6 6.5 REQUIRED COMPONENTS Core Widgets Charts)
+find_package(Qt6 6.5 REQUIRED COMPONENTS Core Widgets Charts Network)
 
 qt_standard_project_setup()
 
@@ -18,18 +18,22 @@ qt_add_executable(SystemMonitor
     include/container.h
     include/util.h
     src/util.cpp
-    include/containerManager.h
-    src/containerManager.cpp
-    include/containerpage.h
-    src/containerpage.cpp
-    include/containerListPanel.h
-    src/containerListPanel.cpp
+        ContainerManager/containerManager.h
+        ContainerManager/containerManager.cpp
+        ContainerPage/containerpage.h
+        ContainerPage/containerpage.cpp
+        ContainerListPanel/containerListPanel.h
+        ContainerListPanel/containerListPanel.cpp
     include/resChart.h
     src/resChart.cpp
-        include/detailPage.h
-        src/detailPage.cpp
-        src/processPage.cpp
-        include/processPage.h
+        ContainerPage/DetailPage/detailPage.h
+        ContainerPage/DetailPage/detailPage.cpp
+        ContainerPage/ProcessPage/processPage.cpp
+        ContainerPage/ProcessPage/processPage.h
+        DataAcquireModule/DataAcquireModule.cpp
+        DataAcquireModule/DataAcquireModule.h
+        DockerMonitor/DockerMonitor.cpp
+        DockerMonitor/DockerMonitor.h
 )
 
 qt_add_resources(SystemMonitor "resources"
@@ -39,13 +43,21 @@ qt_add_resources(SystemMonitor "resources"
 )
 target_sources(SystemMonitor PRIVATE ${RESOURCES})
 
-target_include_directories(SystemMonitor PRIVATE ${CMAKE_SOURCE_DIR}/include)
+target_include_directories(SystemMonitor PRIVATE
+        ${CMAKE_SOURCE_DIR}/include
+        ${CMAKE_SOURCE_DIR}/ContainerListPanel
+        ${CMAKE_SOURCE_DIR}/ContainerManager
+        ${CMAKE_SOURCE_DIR}/ContainerPage
+        ${CMAKE_SOURCE_DIR}/DataAcquireModule
+        ${CMAKE_SOURCE_DIR}/DockerMonitor
+)
 
 target_link_libraries(SystemMonitor
     PRIVATE
         Qt::Core
         Qt::Widgets
         Qt::Charts
+        Qt::Network
 )
 
 install(TARGETS SystemMonitor

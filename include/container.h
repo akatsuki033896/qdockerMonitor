@@ -23,7 +23,6 @@ struct Container {
 
     double cpuPercent = 0.0;
     double memPercent = 0.0;
-    std::string memUsage;
 
     Container() = default;
 };

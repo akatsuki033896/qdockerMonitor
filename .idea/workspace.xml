@@ -1,0 +1,155 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="AutoImportSettings">
+    <option name="autoReloadType" value="SELECTIVE" />
+  </component>
+  <component name="BackendCodeEditorMiscSettings">
+    <option name="/Default/Housekeeping/FeatureSuggestion/FeatureSuggestionManager/DisabledSuggesters/=SwitchToGoToActionSuggester/@EntryIndexedValue" value="true" type="bool" />
+    <option name="/Default/Housekeeping/GlobalSettingsUpgraded/IsUpgraded/@EntryValue" value="true" type="bool" />
+    <option name="/Default/RiderDebugger/RiderRestoreDecompile/RestoreDecompileSetting/@EntryValue" value="false" type="bool" />
+  </component>
+  <component name="CMakePresetLoader"><![CDATA[{
+  "useNewFormat": true
+}]]></component>
+  <component name="CMakeProjectFlavorService">
+    <option name="flavorId" value="CMakePlainProjectFlavor" />
+  </component>
+  <component name="CMakeReloadState">
+    <option name="reloaded" value="true" />
+  </component>
+  <component name="CMakeRunConfigurationManager">
+    <generated>
+      <config projectName="SystemMonitor" targetName="SystemMonitor" />
+    </generated>
+  </component>
+  <component name="CMakeSettings">
+    <configurations>
+      <configuration PROFILE_NAME="Debug" ENABLED="true" CONFIG_NAME="Debug" />
+    </configurations>
+  </component>
+  <component name="ChangeListManager">
+    <list default="true" id="5af42998-e934-4208-80f4-ccc3986f83bc" name="Changes" comment="">
+      <change afterPath="$PROJECT_DIR$/DataAcquireModule/DataAcquireModule.cpp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/DataAcquireModule/DataAcquireModule.h" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/.gitignore" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/inspectionProfiles/Project_Default.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/inspectionProfiles/Project_Default.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/CMakeLists.txt" beforeDir="false" afterPath="$PROJECT_DIR$/CMakeLists.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/include/container.h" beforeDir="false" afterPath="$PROJECT_DIR$/include/container.h" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/include/containerListPanel.h" beforeDir="false" afterPath="$PROJECT_DIR$/ContainerListPanel/containerListPanel.h" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/include/containerManager.h" beforeDir="false" afterPath="$PROJECT_DIR$/ContainerManager/containerManager.h" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/include/containerpage.h" beforeDir="false" afterPath="$PROJECT_DIR$/ContainerPage/containerpage.h" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/include/detailPage.h" beforeDir="false" afterPath="$PROJECT_DIR$/ContainerPage/DetailPage/detailPage.h" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/include/mainwindow.h" beforeDir="false" afterPath="$PROJECT_DIR$/include/mainwindow.h" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/include/processPage.h" beforeDir="false" afterPath="$PROJECT_DIR$/ContainerPage/ProcessPage/processPage.h" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/include/util.h" beforeDir="false" afterPath="$PROJECT_DIR$/include/util.h" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/main.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/main.cpp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/containerListPanel.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/ContainerListPanel/containerListPanel.cpp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/containerManager.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/ContainerManager/containerManager.cpp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/containerpage.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/ContainerPage/containerpage.cpp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/detailPage.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/ContainerPage/DetailPage/detailPage.cpp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/mainwindow.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/src/mainwindow.cpp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/processPage.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/ContainerPage/ProcessPage/processPage.cpp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/resChart.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/src/resChart.cpp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/util.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/src/util.cpp" afterDir="false" />
+    </list>
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="ClangdSettings">
+    <option name="formatViaClangd" value="false" />
+  </component>
+  <component name="ExecutionTargetManager" SELECTED_TARGET="CMakeBuildProfile:Debug" />
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
+  <component name="HighlightingSettingsPerFile">
+    <setting file="file://$PROJECT_DIR$/ContainerManager/containerManager.cpp" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/ContainerManager/containerManager.h" root0="FORCE_HIGHLIGHTING" />
+  </component>
+  <component name="MacroExpansionManager">
+    <option name="directoryName" value="6STqBODZ" />
+  </component>
+  <component name="ProjectApplicationVersion">
+    <option name="ide" value="CLion" />
+    <option name="majorVersion" value="2026" />
+    <option name="minorVersion" value="1" />
+    <option name="productBranch" value="Classic" />
+  </component>
+  <component name="ProjectColorInfo"><![CDATA[{
+  "customColor": "",
+  "associatedIndex": 2
+}]]></component>
+  <component name="ProjectId" id="3EkL7qp6yV9holqvpECfLLUG1eC" />
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "CMake Application.SystemMonitor.executor": "Run",
+    "ModuleVcsDetector.initialDetectionPerformed": "true",
+    "RunOnceActivity.RadMigrateCodeStyle": "true",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "RunOnceActivity.cidr.known.project.marker": "true",
+    "RunOnceActivity.git.unshallow": "true",
+    "RunOnceActivity.readMode.enableVisualFormatting": "true",
+    "RunOnceActivity.typescript.service.memoryLimit.init": "true",
+    "RunOnceActivity.west.config.association.type.startup.service": "true",
+    "cf.first.check.clang-format": "false",
+    "cidr.known.project.marker": "true",
+    "codeWithMe.voiceChat.enabledByDefault": "false",
+    "git-widget-placeholder": "main",
+    "node.js.detected.package.eslint": "true",
+    "node.js.detected.package.tslint": "true",
+    "node.js.selected.package.eslint": "(autodetect)",
+    "node.js.selected.package.tslint": "(autodetect)",
+    "nodejs_package_manager_path": "npm",
+    "org.rust.first.attach.projects": "true",
+    "settings.editor.selected.configurable": "preferences.pluginManager",
+    "vue.rearranger.settings.migration": "true"
+  }
+}]]></component>
+  <component name="RecentsManager">
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\Users\akatsuki\Desktop\qdockerMonitor" />
+      <recent name="C:\Users\akatsuki\Desktop\qdockerMonitor\src\ContainerManager" />
+      <recent name="C:\Users\akatsuki\Desktop\qdockerMonitor\ContainerPage" />
+      <recent name="C:\Users\akatsuki\Desktop\qdockerMonitor\src\ProcessPage" />
+      <recent name="C:\Users\akatsuki\Desktop\qdockerMonitor\include\DetailPage" />
+    </key>
+  </component>
+  <component name="RunManager">
+    <configuration name="SystemMonitor" type="CMakeRunConfiguration" factoryName="Application" REDIRECT_INPUT="false" ELEVATE="false" USE_EXTERNAL_CONSOLE="false" EMULATE_TERMINAL="false" PASS_PARENT_ENVS_2="true" PROJECT_NAME="SystemMonitor" TARGET_NAME="SystemMonitor" CONFIG_NAME="Debug" RUN_TARGET_PROJECT_NAME="SystemMonitor" RUN_TARGET_NAME="SystemMonitor">
+      <method v="2">
+        <option name="com.jetbrains.cidr.execution.CidrBuildBeforeRunTaskProvider$BuildBeforeRunTask" enabled="true" />
+      </method>
+    </configuration>
+    <configuration default="true" type="CMakeRunConfiguration" factoryName="Application" REDIRECT_INPUT="false" ELEVATE="false" USE_EXTERNAL_CONSOLE="false" EMULATE_TERMINAL="false" PASS_PARENT_ENVS_2="true">
+      <method v="2">
+        <option name="com.jetbrains.cidr.execution.CidrBuildBeforeRunTaskProvider$BuildBeforeRunTask" enabled="true" />
+      </method>
+    </configuration>
+  </component>
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="5af42998-e934-4208-80f4-ccc3986f83bc" name="Changes" comment="" />
+      <created>1780717460180</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1780717460180</updated>
+      <workItem from="1780717470218" duration="19233000" />
+    </task>
+    <servers />
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="3" />
+  </component>
+  <component name="VCPKGProject">
+    <isAutomaticCheckingOnLaunch value="false" />
+    <isAutomaticFoundErrors value="true" />
+    <isAutomaticReloadCMake value="true" />
+    <isAutomaticBootstrapAfterUpdate value="false" />
+  </component>
+</project>

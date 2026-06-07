@@ -1,14 +1,14 @@
 #ifndef MAINWINDOW_H
 #define MAINWINDOW_H
 #include "container.h"
-#include "containerpage.h"
+#include "../ContainerPage/containerpage.h"
 #include <QMainWindow>
 #include <QtWidgets/qlistwidget.h>
 #include <QtWidgets/qstackedwidget.h>
 #include <string>
 #include <unordered_map>
-#include "containerManager.h"
-#include "containerListPanel.h"
+#include "../ContainerManager/containerManager.h"
+#include "../ContainerListPanel/containerListPanel.h"
 
 class MainWindow : public QMainWindow {
     Q_OBJECT

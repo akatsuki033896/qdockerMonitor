@@ -2,8 +2,8 @@
 #include <QtCore>
 #include <QtWidgets>
 #include "container.h"
-#include "detailPage.h"
-#include "processPage.h"
+#include "../ContainerPage/DetailPage/detailPage.h"
+#include "../ContainerPage/ProcessPage/processPage.h"
 
 class ContainerPage : public QWidget {
     Q_OBJECT

@@ -1,49 +1,14 @@
-#include "container.h"
-#include "containerManager.h"
+#include "ContainerManager/containerManager.h"
 #include "mainwindow.h"
 #include <QApplication>
-#include <QtCore/qdebug.h>
-#include <QtCore/qobject.h>
-#include <QtCore/qobjectdefs.h>
-#include <QTimer>
+#include <QtCore>
 #include "util.h"
 #include <QMessageBox>
 #include <QFile>
-#include <qthreadpool.h>
-
-
-// docker ps --format "{{.ID}} {{.Names}}"
-// docker stats --no-stream --format "{{.Container}} {{.CPUPerc}} {{.MemUsage}}"
-// docker top <container_ID>
+#include "DockerMonitor/DockerMonitor.h"
 
 // TODO: button
 // TODO: File system
-
-ContainerManager manager;
-QThreadPool* tp = QThreadPool::globalInstance();
-
-void timer_task() {
-    manager.refresh();
-    auto list = manager.get_container_list();
-    std::vector<std::string> ids;
-    for (const auto& c : list) {
-        ids.push_back(c.id);
-    }
-    for (const auto& id : ids) {
-        tp->start(
-            [id, mng = &manager]() {
-                Container temp;
-                temp.id = id;
-                getStat(temp);
-                getInspect(temp);
-                getProcess(temp);
-                QMetaObject::invokeMethod(mng, [mng, temp]() {
-                    mng->update(temp);
-                }, Qt::QueuedConnection);
-            }
-        );
-    }
-}
 
 int main(int argc, char *argv[]) {
     QApplication app(argc, argv);
@@ -60,13 +25,11 @@ int main(int argc, char *argv[]) {
         return -1;
     }
 
-    QTimer timer; // 定时器定时刷新
-    QObject::connect(&timer, &QTimer::timeout, timer_task);
-    timer.start(5000); // 5s 执行一次 事件驱动
-    
-    MainWindow win(&manager);
-    QObject::connect(&manager, &ContainerManager::ContainerListChanged, &win, &MainWindow::onContainerListChanged);
-    QObject::connect(&manager, &ContainerManager::ContainerStatsUpdated, &win, &MainWindow::onContainerStatsUpdated);
+    DockerMonitor *monitor = new DockerMonitor();
+    MainWindow win(monitor->get_mng());
+    QObject::connect(monitor->get_mng(), &ContainerManager::ContainerListChanged, &win, &MainWindow::onContainerListChanged);
+    QObject::connect(monitor->get_mng(), &ContainerManager::ContainerStatsUpdated, &win, &MainWindow::onContainerStatsUpdated);
+    monitor->start();
     win.show();
     return app.exec();
 }

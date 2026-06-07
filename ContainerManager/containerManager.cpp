@@ -7,7 +7,7 @@
 #include <QProcess>
 
 ContainerManager::ContainerManager() {
-    refresh();
+    // refresh();
 }
 
 void ContainerManager::refresh() {
@@ -15,7 +15,7 @@ void ContainerManager::refresh() {
 
     QStringList args;
     args << "ps" << "--format" << "{{.ID}} {{.Names}}";
-    QString output = runDockerAPI(args);
+    QString output = runDockerCLI(args);
     std::string list = output.toStdString();
     std::istringstream iss(list);
     std::string id, name;

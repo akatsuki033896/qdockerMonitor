@@ -16,7 +16,7 @@ MainWindow::MainWindow(ContainerManager* mng, QWidget *parent) : QMainWindow(par
     
     // 左侧列表
     listPanel = new ContainerListPanel;
-    listPanel->setFixedWidth(150);
+    listPanel->setFixedWidth(180);
     layout->addWidget(listPanel);
     // 右侧页面
     stackedWidget = new QStackedWidget;

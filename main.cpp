@@ -1,11 +1,11 @@
-#include "ContainerManager/containerManager.h"
+#include "backend/ContainerManager/containerManager.h"
 #include "mainwindow.h"
 #include <QApplication>
 #include <QtCore>
 #include "util.h"
 #include <QMessageBox>
 #include <QFile>
-#include "DockerMonitor/DockerMonitor.h"
+#include "backend/DockerMonitor/DockerMonitor.h"
 
 // TODO: button
 // TODO: File system
@@ -25,11 +25,12 @@ int main(int argc, char *argv[]) {
         return -1;
     }
 
-    DockerMonitor *monitor = new DockerMonitor();
-    MainWindow win(monitor->get_mng());
-    QObject::connect(monitor->get_mng(), &ContainerManager::ContainerListChanged, &win, &MainWindow::onContainerListChanged);
-    QObject::connect(monitor->get_mng(), &ContainerManager::ContainerStatsUpdated, &win, &MainWindow::onContainerStatsUpdated);
-    monitor->start();
+    DockerMonitor monitor;
+    auto mng = monitor.get_mng();
+    MainWindow win(mng);
+    QObject::connect(mng, &ContainerManager::ContainerListChanged, &win, &MainWindow::onContainerListChanged);
+    QObject::connect(mng, &ContainerManager::ContainerStatsUpdated, &win, &MainWindow::onContainerStatsUpdated);
+    monitor.start();
     win.show();
     return app.exec();
 }

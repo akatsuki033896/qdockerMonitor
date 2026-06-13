@@ -18,22 +18,25 @@ qt_add_executable(SystemMonitor
     include/container.h
     include/util.h
     src/util.cpp
-        ContainerManager/containerManager.h
-        ContainerManager/containerManager.cpp
-        ContainerPage/containerpage.h
-        ContainerPage/containerpage.cpp
-        ContainerListPanel/containerListPanel.h
-        ContainerListPanel/containerListPanel.cpp
+        backend/ContainerManager/containerManager.h
+        backend/ContainerManager/containerManager.cpp
+        frontend/ContainerPage/containerpage.h
+        frontend/ContainerPage/containerpage.cpp
+        frontend/ContainerListPanel/containerListPanel.h
+        frontend/ContainerListPanel/containerListPanel.cpp
     include/resChart.h
     src/resChart.cpp
-        ContainerPage/DetailPage/detailPage.h
-        ContainerPage/DetailPage/detailPage.cpp
-        ContainerPage/ProcessPage/processPage.cpp
-        ContainerPage/ProcessPage/processPage.h
-        DataAcquireModule/DataAcquireModule.cpp
-        DataAcquireModule/DataAcquireModule.h
-        DockerMonitor/DockerMonitor.cpp
-        DockerMonitor/DockerMonitor.h
+        frontend/ContainerPage/DetailPage/detailPage.h
+        frontend/ContainerPage/DetailPage/detailPage.cpp
+        frontend/ContainerPage/ProcessPage/processPage.cpp
+        frontend/ContainerPage/ProcessPage/processPage.h
+        backend/DockerClient/DataAcquireModule/DataAcquireModule.cpp
+        backend/DockerClient/DataAcquireModule/DataAcquireModule.h
+        backend/DockerMonitor/DockerMonitor.cpp
+        backend/DockerMonitor/DockerMonitor.h
+        include/processInfo.h
+        backend/DockerClient/ControlModule/ControlModule.h
+        backend/DockerClient/ControlModule/ControlModule.cpp
 )
 
 qt_add_resources(SystemMonitor "resources"
@@ -45,11 +48,12 @@ target_sources(SystemMonitor PRIVATE ${RESOURCES})
 
 target_include_directories(SystemMonitor PRIVATE
         ${CMAKE_SOURCE_DIR}/include
-        ${CMAKE_SOURCE_DIR}/ContainerListPanel
-        ${CMAKE_SOURCE_DIR}/ContainerManager
-        ${CMAKE_SOURCE_DIR}/ContainerPage
-        ${CMAKE_SOURCE_DIR}/DataAcquireModule
-        ${CMAKE_SOURCE_DIR}/DockerMonitor
+        ${CMAKE_SOURCE_DIR}/frontend/ContainerListPanel
+        ${CMAKE_SOURCE_DIR}/frontend/ContainerPage
+        ${CMAKE_SOURCE_DIR}/backend/ContainerManager
+        ${CMAKE_SOURCE_DIR}/backend/DataAcquireModule
+        ${CMAKE_SOURCE_DIR}/backend/DockerMonitor
+        ${CMAKE_SOURCE_DIR}/backend/ControlModule
 )
 
 target_link_libraries(SystemMonitor

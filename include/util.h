@@ -5,7 +5,5 @@
 
 bool isDockerRunning();
 QString runDockerCLI(const QStringList& args);
-bool getStat(Container& c);
-bool getInspect(Container& c);
+QString runDockerProcess(const QStringList& args);
 void printInfo(const Container& c);
-bool getProcess(const Container& c);

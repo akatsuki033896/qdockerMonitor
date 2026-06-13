@@ -2,6 +2,7 @@
 #include <string>
 #include <map>
 #include <vector>
+#include "ProcessInfo.h"
 
 // 存储container 数据，若持有锁则违反单一职责原则
 struct Container {
@@ -24,5 +25,8 @@ struct Container {
     double cpuPercent = 0.0;
     double memPercent = 0.0;
 
+    // 进程列表
+    std::vector<ProcessInfo> processes;
+    
     Container() = default;
 };
